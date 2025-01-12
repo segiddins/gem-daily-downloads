@@ -1,5 +1,11 @@
 use std::collections::HashMap;
+use std::fs;
+use std::num::NonZeroUsize;
+use std::path::PathBuf;
 
+use anyhow::Context;
+use chrono::NaiveDate;
+use clap_derive::Subcommand;
 use indicatif::ParallelProgressIterator;
 use indicatif::ProgressBar;
 use indicatif::ProgressIterator;
@@ -13,6 +19,56 @@ use serde::Serialize;
 use time::Date;
 use url::Url;
 
+use clap::Parser;
+use clap_derive::Parser;
+
+#[derive(Parser, Debug)]
+struct Cli {
+    #[command(subcommand)]
+    command: Commands,
+}
+
+fn parse_date(arg: &str) -> chrono::ParseResult<chrono::NaiveDate> {
+    chrono::NaiveDate::parse_from_str(arg, "%Y-%m-%d")
+}
+
+#[derive(Subcommand, Debug)]
+enum Commands {
+    /// Downloads the gem download data from bestgems.org
+    Download {
+        #[clap(long)]
+        sqlite: Option<PathBuf>,
+    },
+
+    /// Query downloads for a single gem
+    Gem {
+        /// The name of the gem
+        name: String,
+        /// Start date
+        #[clap(long, value_parser=parse_date)]
+        start_date: Option<Date>,
+        /// End date
+        #[clap(long, value_parser=parse_date)]
+        end_date: Option<Date>,
+    },
+
+    /// Query top gems by downloads over a period
+    Top {
+        /// Count of top gems to show
+        #[clap(short = 'n', default_value = "10")]
+        count: NonZeroUsize,
+        /// Period to query
+        #[clap(long, default_value = "28d")]
+        duration: humantime::Duration,
+        /// End date (defaults to today)
+        #[clap(long, value_parser=parse_date)]
+        end_date: Option<NaiveDate>,
+        /// Only show gems that are new in the period
+        #[clap(long)]
+        only_new: bool,
+    },
+}
+
 #[derive(Debug, Deserialize)]
 struct BetterGem {
     date: Date,
@@ -23,17 +79,23 @@ struct BetterGem {
 struct Download {
     date: Date,
     total_downloads: i64,
-    daily_downloads: i64,
+    daily_downloads: Option<i64>,
 }
 
 #[derive(Debug, Serialize)]
 struct GemDownload<'a> {
     name: &'a str,
     total_downloads: i64,
-    daily_downloads: i64,
+    daily_downloads: Option<i64>,
 }
 
-fn parse_better_gem_file(file_path: &str) -> Result<Vec<BetterGem>, Box<dyn std::error::Error>> {
+#[derive(Debug, Deserialize)]
+struct DeGemDownload {
+    name: String,
+    total_downloads: i64,
+}
+
+fn parse_better_gem_file(file_path: &str) -> anyhow::Result<Vec<BetterGem>> {
     let file = std::fs::read_to_string(file_path)?;
     let mut better_gems: Vec<BetterGem> = serde_json::from_str(&file)?;
     better_gems.sort_by_key(|bg| bg.date);
@@ -64,7 +126,7 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
     let mut last_download: Download = Download {
         date: start_date,
         total_downloads: 0,
-        daily_downloads: 0,
+        daily_downloads: None,
     };
     for better_gem in better_gems {
         let days_between = (better_gem.date - last_download.date).whole_days();
@@ -74,12 +136,12 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
         // );
         if days_between == 1 {
             last_download.daily_downloads =
-                better_gem.total_downloads - last_download.total_downloads;
+                Some(better_gem.total_downloads - last_download.total_downloads);
             dl.downloads.push(last_download);
             last_download = Download {
                 date: better_gem.date,
                 total_downloads: better_gem.total_downloads,
-                daily_downloads: 0,
+                daily_downloads: None,
             };
         } else {
             for i in 1..=days_between {
@@ -88,11 +150,12 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
                 let total_diff = better_gem.total_downloads - last_download.total_downloads;
                 let total_downloads =
                     last_download.total_downloads + (total_diff * i / days_between);
-                last_download.daily_downloads = total_downloads - last_download.total_downloads;
+                last_download.daily_downloads =
+                    Some(total_downloads - last_download.total_downloads);
                 let interpolated = Download {
                     date: interpolated_date,
                     total_downloads,
-                    daily_downloads: 0,
+                    daily_downloads: None,
                 };
                 dl.downloads.push(last_download);
                 last_download = interpolated;
@@ -129,9 +192,7 @@ fn group_downloads<'a>(
     dates
 }
 
-fn download_better_gems(
-    progress_style: ProgressStyle,
-) -> Result<Vec<String>, Box<dyn std::error::Error>> {
+fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<String>> {
     let names_url = "https://rubygems.org/names";
     let client = reqwest::blocking::Client::new();
 
@@ -154,7 +215,7 @@ fn download_better_gems(
         .par_iter()
         .progress_with(progress_bar)
         .filter(|name| {
-            let path = format!("{}.json", name);
+            let path = format!("bettergems/{}.json", name);
             if serde_json::from_str::<Vec<BetterGem>>(
                 &std::fs::read_to_string(&path).unwrap_or("[]".to_owned()),
             )
@@ -191,8 +252,9 @@ fn download_better_gems(
         .collect::<Vec<_>>())
 }
 
-fn main() {
-    std::env::set_current_dir("/Users/segiddins/total-downloads").unwrap();
+fn download(sqlite_path: Option<PathBuf>) {
+    fs::create_dir_all("bettergems").unwrap();
+    fs::create_dir_all("dates").unwrap();
 
     let progress_style = ProgressStyle::default_bar()
         .template("{prefix} {msg} {elapsed_precise} {percent}% {per_sec} ETA {eta} {wide_bar:.green} {pos}/{len}")
@@ -207,7 +269,7 @@ fn main() {
         .with_style(progress_style.clone())
         .with_finish(indicatif::ProgressFinish::AndLeave)
         .map(|name| {
-            let path = format!("{}.json", name);
+            let path = format!("bettergems/{}.json", name);
             let better_gems = parse_better_gem_file(&path).unwrap_or_else(|e| {
                 println!("Error parsing {}: {}", path, e);
                 vec![]
@@ -232,17 +294,18 @@ fn main() {
             wtr.flush().unwrap();
         });
 
-    let mut conn = rusqlite::Connection::open("db/downloads.sqlite3").unwrap();
-    conn.execute_batch(
-        "PRAGMA journal_mode = OFF;
+    if let Some(sqlite_path) = sqlite_path {
+        let mut conn = rusqlite::Connection::open(sqlite_path).unwrap();
+        conn.execute_batch(
+            "PRAGMA journal_mode = OFF;
               PRAGMA synchronous = 0;
               PRAGMA cache_size = 1000000;
               PRAGMA locking_mode = EXCLUSIVE;
               PRAGMA temp_store = MEMORY;",
-    )
-    .expect("PRAGMA");
-    conn.execute(
-        r#"
+        )
+        .expect("PRAGMA");
+        conn.execute(
+            r#"
             CREATE TABLE IF NOT EXISTS downloads (
                 date DATE,
                 gem_name TEXT,
@@ -251,13 +314,13 @@ fn main() {
                 PRIMARY KEY (date, gem_name)
             );
         "#,
-        [],
-    )
-    .unwrap();
+            [],
+        )
+        .unwrap();
 
-    {
         {
-            dates
+            {
+                dates
                 .iter()
                 .progress()
                 .with_prefix("Inserting into sqlite")
@@ -285,8 +348,105 @@ fn main() {
                         tx.commit().unwrap();
                 }
                 });
+            }
         }
+
+        conn.execute("VACUUM;", []).unwrap();
+    }
+}
+
+fn read_gem_downloads(date: NaiveDate) -> anyhow::Result<HashMap<String, DeGemDownload>> {
+    let path = format!("../dates/{}.csv", date);
+    let file = fs::File::open(&path).with_context(|| format!("Failed to open file {}", path))?;
+    let mut rdr = csv::Reader::from_reader(file);
+
+    let deserialized = rdr
+        .deserialize::<DeGemDownload>()
+        .fold_ok(
+            HashMap::new(),
+            |mut hm: HashMap<String, DeGemDownload>, gd| {
+                hm.insert(gd.name.to_string(), gd);
+                hm
+            },
+        )
+        .with_context(|| format!("Failed to read csv file {}", path))?;
+
+    Ok(deserialized)
+}
+
+fn top(
+    count: NonZeroUsize,
+    duration: humantime::Duration,
+    end: NaiveDate,
+    only_new: bool,
+) -> anyhow::Result<()> {
+    let start = end - chrono::Duration::from_std(*duration).unwrap();
+
+    let start_downloads = read_gem_downloads(start)?;
+    let end_downloads = read_gem_downloads(end)?;
+
+    #[derive(Debug)]
+    struct Diff<'a> {
+        name: &'a str,
+        diff: i64,
+        start: i64,
+        end: i64,
     }
 
-    conn.execute("VACUUM;", []).unwrap();
+    let top = end_downloads
+        .values()
+        .map(|end| {
+            let start = start_downloads.get(&end.name);
+            let start_downloads = start.map_or(0, |d| d.total_downloads);
+            Diff {
+                name: &end.name,
+                start: start_downloads,
+                end: end.total_downloads,
+                diff: end.total_downloads - start_downloads,
+            }
+        })
+        .sorted_by_key(|gd| -gd.diff)
+        .filter(|gd| !only_new || gd.start == 0)
+        .take(count.get())
+        .collect_vec();
+
+    println!("Top {} gems by downloads from {} to {}", count, start, end);
+
+    println!(
+        "{: <60} {: >10} {: >10} {: >10}",
+        "Name", "Start", "End", "Diff"
+    );
+    println!("{:-<60} {:-<10} {:-<10} {:-<10}", "", "", "", "");
+    for gd in top {
+        println!(
+            "{: <60} {: >10} {: >10} {: >10}",
+            gd.name, gd.start, gd.end, gd.diff
+        );
+    }
+    Ok(())
+}
+
+fn main() {
+    let command = Cli::parse();
+
+    match command.command {
+        Commands::Download { sqlite } => download(sqlite),
+        Commands::Top {
+            count,
+            duration,
+            end_date,
+            only_new,
+        } => top(
+            count,
+            duration,
+            end_date.unwrap_or_else(|| {
+                let today = time::OffsetDateTime::now_local().unwrap().date();
+                NaiveDate::from_ymd_opt(today.year(), today.month() as u32, today.day() as u32)
+                    .unwrap()
+            }),
+            only_new,
+        )
+        .unwrap(),
+        _ => unreachable!(),
+    }
 }
