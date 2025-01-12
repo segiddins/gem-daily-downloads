@@ -356,7 +356,7 @@ fn download(sqlite_path: Option<PathBuf>) {
 }
 
 fn read_gem_downloads(date: NaiveDate) -> anyhow::Result<HashMap<String, DeGemDownload>> {
-    let path = format!("../dates/{}.csv", date);
+    let path = format!("dates/{}.csv", date);
     let file = fs::File::open(&path).with_context(|| format!("Failed to open file {}", path))?;
     let mut rdr = csv::Reader::from_reader(file);
 

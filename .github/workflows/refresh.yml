@@ -1,0 +1,27 @@
+name: Refresh
+on:
+  schedule:
+    - cron: "44 10 * * *"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v3.1.0
+        with:
+          persist-credentials: false
+
+      - run: rustup toolchain install stable --profile minimal
+
+      - uses: Swatinem/rust-cache@f0deed1e0edfc6a9be95417288c0e1099b1eeec3 # v2
+
+      - run: cargo build --release
+      - run: ./target/release/daily-downloads download
+      - run: ./target/release/daily-downloads top
+      - run: git add -A
+      - run: git commit -m "Refresh"
+      - run: git push
