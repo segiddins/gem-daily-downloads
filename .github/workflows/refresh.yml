@@ -2,6 +2,7 @@ name: Refresh
 on:
   schedule:
     - cron: "44 10 * * *"
+  workflow_dispatch:
 
 jobs:
   refresh:
