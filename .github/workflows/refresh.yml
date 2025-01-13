@@ -13,9 +13,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v3.1.0
         with:
           persist-credentials: false
-          sparse-checkout: |
-            src
-            Cargo*
+          filter: "blob:limit=1m"
       - run: rustup toolchain install stable --profile minimal
       - uses: Swatinem/rust-cache@f0deed1e0edfc6a9be95417288c0e1099b1eeec3 # v2
       - run: cargo build --release
