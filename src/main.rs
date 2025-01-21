@@ -215,7 +215,7 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
         .par_iter()
         .progress_with(progress_bar)
         .filter(|name| {
-            let path = format!("bettergems/{}.json", name);
+            let path = better_gem_path(name);
             if serde_json::from_str::<Vec<BetterGem>>(
                 &std::fs::read_to_string(&path).unwrap_or("[]".to_owned()),
             )
@@ -252,6 +252,42 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
         .collect::<Vec<_>>())
 }
 
+fn better_gem_path(name: &str) -> String {
+    format!(
+        "bettergems/{}.json",
+        name.bytes()
+            .map(|c| {
+                if c.is_ascii_lowercase() || c == b'-' || c == b'_' || c.is_ascii_digit() {
+                    String::from_utf8(vec![c]).unwrap()
+                } else {
+                    format!("%{:02X}", c)
+                }
+            })
+            .collect::<String>()
+    )
+}
+
+#[test]
+fn test_better_gem_path() {
+    assert_eq!(better_gem_path("aa"), "bettergems/aa.json");
+    assert_eq!(better_gem_path("a a"), "bettergems/a%20a.json");
+    assert_eq!(better_gem_path("foo-bar"), "bettergems/foo-bar.json");
+    assert_eq!(better_gem_path("foo_bar"), "bettergems/foo_bar.json");
+    assert_eq!(
+        better_gem_path("foo-bar_baz"),
+        "bettergems/foo-bar_baz.json"
+    );
+    assert_eq!(
+        better_gem_path("foo-bar_baz-qux"),
+        "bettergems/foo-bar_baz-qux.json"
+    );
+    assert_eq!(
+        better_gem_path("foo-bar_baz-qux-123"),
+        "bettergems/foo-bar_baz-qux-123.json"
+    );
+    assert_eq!(better_gem_path("AAaa"), "bettergems/%41%41aa.json");
+}
+
 fn download(sqlite_path: Option<PathBuf>) {
     fs::create_dir_all("bettergems").unwrap();
     fs::create_dir_all("dates").unwrap();
@@ -269,7 +305,7 @@ fn download(sqlite_path: Option<PathBuf>) {
         .with_style(progress_style.clone())
         .with_finish(indicatif::ProgressFinish::AndLeave)
         .map(|name| {
-            let path = format!("bettergems/{}.json", name);
+            let path = better_gem_path(name);
             let better_gems = parse_better_gem_file(&path).unwrap_or_else(|e| {
                 println!("Error parsing {}: {}", path, e);
                 vec![]
