@@ -7,5 +7,5 @@ ls_files.split("\0").group_by { |file| file =~ /\Adates\/(\d{4}-\d{2})-/ && $1 }
   puts "#{month}: #{files.size}"
   system("git", "add", *files, exception: true)
   system("git", "commit", "-sm", "Update #{month}", exception: true)
-  system("git", "push", exception: true)
+  system("git", "push", "origin", exception: true)
 end
