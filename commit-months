@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+ls_files = `git ls-files -z --modified --others --exclude-standard -- dates`
+exit 1 if $?.exitstatus != 0
+exit 0 if ls_files.empty?
+ls_files.split("\0").group_by { |file| file =~ /\Adates\/(\d{4}-\d{2})-/ && $1 }.sort_by(&:first).each do |month, files|
+  puts "#{month}: #{files.size}"
+  system("git", "add", *files, exception: true)
+  system("git", "commit", "-sm", "Update #{month}", exception: true)
+  system("git", "push", exception: true)
+end

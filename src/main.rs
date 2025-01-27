@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::collections::HashSet;
 use std::fs;
 use std::num::NonZeroUsize;
 use std::path::PathBuf;
@@ -196,13 +197,34 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
     let names_url = "https://rubygems.org/names";
     let client = reqwest::blocking::Client::new();
 
-    let names = client
-        .get(names_url)
-        .send()?
-        .text()?
-        .split('\n')
-        .map(str::to_string)
-        .collect_vec();
+    // Add names from most recent CSV, so we don't lose data for yanked gems
+    let names = {
+        let mut names: HashSet<String> = client
+            .get(names_url)
+            .send()?
+            .text()?
+            .split('\n')
+            .map(str::to_string)
+            .collect();
+
+        let last_csv = std::fs::read_dir(std::path::Path::new("dates"))?
+            .filter_map(|entry| entry.ok())
+            .filter(|entry| entry.path().extension().and_then(|ext| ext.to_str()) == Some("csv"))
+            .sorted_by_key(|entry| entry.path().file_name().unwrap().to_owned())
+            .last()
+            .unwrap();
+
+        let mut rdr =
+            csv::Reader::from_path(last_csv.path()).expect("Could not read latest CSV file");
+
+        let csv_names: Vec<String> = rdr
+            .deserialize::<DeGemDownload>()
+            .filter_map_ok(|record| Some(record.name))
+            .collect::<Result<Vec<_>, _>>()?;
+
+        names.extend(csv_names);
+        names.into_iter().sorted().collect_vec()
+    };
 
     let progress_bar = ProgressBar::new(names.len() as u64)
         .with_style(progress_style)
@@ -246,6 +268,7 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
                     let mut file = std::fs::File::create(path).unwrap();
                     response.copy_to(&mut file).is_ok()
                 })
+                .inspect_err(|r| eprintln!("error downloading {:?}: {}", name, r))
                 .unwrap_or(false)
         })
         .cloned()
