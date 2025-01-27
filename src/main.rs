@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::fs;
+use std::io::Write;
 use std::num::NonZeroUsize;
 use std::path::PathBuf;
 
@@ -233,6 +234,8 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
 
     let today = time::OffsetDateTime::now_utc().date();
 
+    let errors = std::sync::Mutex::new(std::fs::File::create("errors.csv")?);
+
     Ok(names
         .par_iter()
         .progress_with(progress_bar)
@@ -253,26 +256,33 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
                 return true;
             }
 
-            let mut url = Url::parse("https://bestgems.org/api/v1/gems/").unwrap();
-            url.path_segments_mut()
-                .unwrap()
-                .extend([name, "total_downloads.json"]);
-
-            client
-                .get(url.as_str())
-                .send()
-                .map(|mut response| {
-                    if !response.status().is_success() {
-                        return false;
-                    }
-                    let mut file = std::fs::File::create(path).unwrap();
-                    response.copy_to(&mut file).is_ok()
+            download_better_gem(&client, name)
+                .inspect_err(|e| {
+                    eprintln!("error downloading {:?}: {}", name, e);
+                    errors
+                        .lock()
+                        .unwrap()
+                        .write_fmt(format_args!("\"{}\",\"{}\"\n", name, e))
+                        .unwrap();
                 })
-                .inspect_err(|r| eprintln!("error downloading {:?}: {}", name, r))
-                .unwrap_or(false)
+                .is_ok()
         })
         .cloned()
         .collect::<Vec<_>>())
+}
+
+fn download_better_gem(client: &reqwest::blocking::Client, name: &str) -> anyhow::Result<()> {
+    let mut url = Url::parse("https://bestgems.org/api/v1/gems")?;
+    url.path_segments_mut()
+        .map_err(|_| anyhow::anyhow!("Failed to parse URL"))?
+        .extend([name, "total_downloads.json"]);
+
+    let mut response = client.get(url.as_str()).send()?.error_for_status()?;
+
+    let path = better_gem_path(name);
+    let mut file = std::fs::File::create(path)?;
+    response.copy_to(&mut file)?;
+    Ok(())
 }
 
 fn better_gem_path(name: &str) -> String {
