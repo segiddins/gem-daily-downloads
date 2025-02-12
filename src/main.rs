@@ -1,7 +1,6 @@
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::fs;
-use std::io::Write;
 use std::num::NonZeroUsize;
 use std::path::PathBuf;
 
@@ -13,6 +12,7 @@ use indicatif::ProgressBar;
 use indicatif::ProgressIterator;
 use indicatif::ProgressStyle;
 use itertools::Itertools;
+use rayon::iter::IntoParallelIterator;
 use rayon::iter::IntoParallelRefIterator;
 use rayon::iter::ParallelIterator;
 use rusqlite::named_params;
@@ -200,7 +200,7 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
 
     // Add names from most recent CSV, so we don't lose data for yanked gems
     let names = {
-        let mut names: HashSet<String> = client
+        let names: HashSet<String> = client
             .get(names_url)
             .send()?
             .text()?
@@ -208,23 +208,34 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
             .map(str::to_string)
             .collect();
 
-        let last_csv = std::fs::read_dir(std::path::Path::new("dates"))?
+        let mut seen_names = std::fs::read_dir(std::path::Path::new("dates"))?
+            .collect_vec()
+            .into_iter()
+            .rev()
+            .take(100)
+            .collect_vec()
+            .into_par_iter()
+            .progress_with_style(progress_style.clone())
+            .with_message("Finding all seen gem names")
             .filter_map(|entry| entry.ok())
             .filter(|entry| entry.path().extension().and_then(|ext| ext.to_str()) == Some("csv"))
-            .sorted_by_key(|entry| entry.path().file_name().unwrap().to_owned())
-            .last()
-            .unwrap();
+            .flat_map(|entry| {
+                let mut rdr =
+                    csv::Reader::from_path(entry.path()).expect("Could not read CSV file");
+                rdr.deserialize::<DeGemDownload>()
+                    .filter_map_ok(|record| Some(record.name))
+                    .collect::<Result<HashSet<_>, _>>()
+            })
+            .reduce(
+                || HashSet::<String>::new(),
+                |mut acc, names| {
+                    acc.extend(names);
+                    acc
+                },
+            );
 
-        let mut rdr =
-            csv::Reader::from_path(last_csv.path()).expect("Could not read latest CSV file");
-
-        let csv_names: Vec<String> = rdr
-            .deserialize::<DeGemDownload>()
-            .filter_map_ok(|record| Some(record.name))
-            .collect::<Result<Vec<_>, _>>()?;
-
-        names.extend(csv_names);
-        names.into_iter().sorted().collect_vec()
+        seen_names.extend(names);
+        seen_names.into_iter().sorted().collect_vec()
     };
 
     let progress_bar = ProgressBar::new(names.len() as u64)
@@ -234,9 +245,9 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
 
     let today = time::OffsetDateTime::now_utc().date();
 
-    let errors = std::sync::Mutex::new(std::fs::File::create("errors.csv")?);
+    let errors = std::sync::Mutex::new(Vec::<String>::new());
 
-    Ok(names
+    let downloaded = names
         .par_iter()
         .progress_with(progress_bar)
         .filter(|name| {
@@ -262,13 +273,18 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
                     errors
                         .lock()
                         .unwrap()
-                        .write_fmt(format_args!("\"{}\",\"{}\"\n", name, e))
-                        .unwrap();
+                        .push(format!("\"{}\",\"{}\"\n", name, e));
                 })
                 .is_ok()
         })
         .cloned()
-        .collect::<Vec<_>>())
+        .collect::<Vec<_>>();
+
+    let mut errors = errors.lock().unwrap();
+    errors.sort();
+    std::fs::write("errors.csv", errors.join(""))?;
+
+    Ok(downloaded)
 }
 
 fn download_better_gem(client: &reqwest::blocking::Client, name: &str) -> anyhow::Result<()> {
