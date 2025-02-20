@@ -6,6 +6,7 @@ use std::path::PathBuf;
 
 use anyhow::Context;
 use chrono::NaiveDate;
+use chrono::Utc;
 use clap_derive::Subcommand;
 use indicatif::ParallelProgressIterator;
 use indicatif::ProgressBar;
@@ -18,7 +19,6 @@ use rayon::iter::ParallelIterator;
 use rusqlite::named_params;
 use serde::Deserialize;
 use serde::Serialize;
-use time::Date;
 use url::Url;
 
 use clap::Parser;
@@ -48,10 +48,10 @@ enum Commands {
         name: String,
         /// Start date
         #[clap(long, value_parser=parse_date)]
-        start_date: Option<Date>,
+        start_date: Option<NaiveDate>,
         /// End date
         #[clap(long, value_parser=parse_date)]
-        end_date: Option<Date>,
+        end_date: Option<NaiveDate>,
     },
 
     /// Query top gems by downloads over a period
@@ -73,13 +73,13 @@ enum Commands {
 
 #[derive(Debug, Deserialize)]
 struct BetterGem {
-    date: Date,
+    date: NaiveDate,
     total_downloads: i64,
 }
 
 #[derive(Debug, Serialize)]
 struct Download {
-    date: Date,
+    date: NaiveDate,
     total_downloads: i64,
     daily_downloads: Option<i64>,
 }
@@ -117,9 +117,9 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
         };
     }
 
-    let start_date = better_gems.first().unwrap().date.previous_day().unwrap();
+    let start_date = better_gems.first().unwrap().date.pred_opt().unwrap();
     let end_date = better_gems.last().unwrap().date;
-    let size = (end_date - start_date).whole_days() as usize;
+    let size = (end_date - start_date).num_days() as usize;
     let mut dl = Downloads {
         name: name.to_string(),
         downloads: Vec::with_capacity(size),
@@ -131,7 +131,7 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
         daily_downloads: None,
     };
     for better_gem in better_gems {
-        let days_between = (better_gem.date - last_download.date).whole_days();
+        let days_between = (better_gem.date - last_download.date).num_days();
         // println!(
         //     "{}: {} days between {:?} and {:?}",
         //     name, days_between, last_download.date, better_gem.date
@@ -147,7 +147,7 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
             };
         } else {
             for i in 1..=days_between {
-                let interpolated_date = last_download.date.next_day().unwrap();
+                let interpolated_date = last_download.date.succ_opt().unwrap();
                 // println!("{}: {}", name, interpolated_date);
                 let total_diff = better_gem.total_downloads - last_download.total_downloads;
                 let total_downloads =
@@ -172,8 +172,8 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
 fn group_downloads<'a>(
     downloads: &'a [Downloads],
     progress_style: &ProgressStyle,
-) -> Vec<(Date, Vec<GemDownload<'a>>)> {
-    let mut grouped: HashMap<Date, Vec<GemDownload<'a>>> = HashMap::new();
+) -> Vec<(NaiveDate, Vec<GemDownload<'a>>)> {
+    let mut grouped: HashMap<NaiveDate, Vec<GemDownload<'a>>> = HashMap::new();
     downloads
         .iter()
         .progress()
@@ -234,6 +234,14 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
                 },
             );
 
+        let err_names = csv::Reader::from_path("errors.csv")
+            .unwrap_or_else(|_| panic!("Failed to open errors.csv"))
+            .deserialize::<(String, String)>()
+            .filter_map_ok(|(name, _)| Some(name))
+            .collect::<Result<HashSet<_>, _>>()
+            .unwrap();
+
+        seen_names.extend(err_names);
         seen_names.extend(names);
         seen_names.into_iter().sorted().collect_vec()
     };
@@ -243,7 +251,7 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
         .with_prefix("Downloading better gems")
         .with_finish(indicatif::ProgressFinish::AndLeave);
 
-    let today = time::OffsetDateTime::now_utc().date();
+    let today = Utc::now().naive_utc().date();
 
     let errors = std::sync::Mutex::new(Vec::<String>::new());
 
@@ -258,7 +266,7 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
             .is_ok_and(|d| {
                 d.first()
                     .unwrap_or(&BetterGem {
-                        date: Date::from_calendar_date(2000, time::Month::January, 1).unwrap(),
+                        date: NaiveDate::from_ymd_opt(2000, 1, 1).unwrap(),
                         total_downloads: 0,
                     })
                     .date
@@ -371,7 +379,8 @@ fn download(sqlite_path: Option<PathBuf>) {
         .with_style(progress_style.clone())
         .with_finish(indicatif::ProgressFinish::AndLeave)
         .for_each(|(date, downloads)| {
-            let f = std::fs::File::create(format!("dates/{}.csv", date)).unwrap();
+            let f = std::fs::File::create(date_path(*date))
+                .unwrap_or_else(|e| panic!("Failed to create file {}: {}", date_path(*date), e));
             let mut wtr = csv::Writer::from_writer(f);
             for download in downloads {
                 wtr.serialize(download).unwrap();
@@ -422,7 +431,7 @@ fn download(sqlite_path: Option<PathBuf>) {
 
                             for download in downloads {
                                 stmt.execute(named_params! {
-                                    ":date": date,
+                                    ":date": date.to_string(),
                                     ":gem_name": download.name,
                                     ":total": download.total_downloads,
                                     ":daily": download.daily_downloads,
@@ -440,8 +449,13 @@ fn download(sqlite_path: Option<PathBuf>) {
     }
 }
 
+fn date_path(date: NaiveDate) -> String {
+    use chrono::Datelike;
+    format!("dates/{}/{:02}/{}.csv", date.year(), date.month(), date)
+}
+
 fn read_gem_downloads(date: NaiveDate) -> anyhow::Result<HashMap<String, DeGemDownload>> {
-    let path = format!("dates/{}.csv", date);
+    let path = date_path(date);
     let file = fs::File::open(&path).with_context(|| format!("Failed to open file {}", path))?;
     let mut rdr = csv::Reader::from_reader(file);
 
@@ -524,11 +538,7 @@ fn main() {
         } => top(
             count,
             duration,
-            end_date.unwrap_or_else(|| {
-                let today = time::OffsetDateTime::now_local().unwrap().date();
-                NaiveDate::from_ymd_opt(today.year(), today.month() as u32, today.day() as u32)
-                    .unwrap()
-            }),
+            end_date.unwrap_or_else(|| Utc::now().naive_utc().date()),
             only_new,
         )
         .unwrap(),
