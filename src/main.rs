@@ -1,10 +1,13 @@
+use std::collections::BTreeMap;
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::fs;
 use std::num::NonZeroUsize;
 use std::path::PathBuf;
+use std::sync::Arc;
 
 use anyhow::Context;
+use chrono::FixedOffset;
 use chrono::NaiveDate;
 use chrono::Utc;
 use clap_derive::Subcommand;
@@ -85,8 +88,8 @@ struct Download {
 }
 
 #[derive(Debug, Serialize)]
-struct GemDownload<'a> {
-    name: &'a str,
+struct GemDownload {
+    name: Arc<String>,
     total_downloads: i64,
     daily_downloads: Option<i64>,
 }
@@ -109,10 +112,10 @@ struct Downloads {
     downloads: Vec<Download>,
 }
 
-fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Downloads {
+fn better_gems_to_downloads(name: String, better_gems: Vec<BetterGem>) -> Downloads {
     if better_gems.is_empty() {
         return Downloads {
-            name: name.to_owned(),
+            name,
             downloads: vec![],
         };
     }
@@ -121,7 +124,7 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
     let end_date = better_gems.last().unwrap().date;
     let size = (end_date - start_date).num_days() as usize;
     let mut dl = Downloads {
-        name: name.to_string(),
+        name,
         downloads: Vec::with_capacity(size),
     };
 
@@ -169,29 +172,30 @@ fn better_gems_to_downloads(name: &str, better_gems: Vec<BetterGem>) -> Download
     dl
 }
 
-fn group_downloads<'a>(
-    downloads: &'a [Downloads],
+fn group_downloads(
+    downloads: Vec<Downloads>,
     progress_style: &ProgressStyle,
-) -> Vec<(NaiveDate, Vec<GemDownload<'a>>)> {
-    let mut grouped: HashMap<NaiveDate, Vec<GemDownload<'a>>> = HashMap::new();
+) -> Vec<(NaiveDate, Vec<GemDownload>)> {
+    let mut grouped: BTreeMap<NaiveDate, Vec<GemDownload>> = Default::default();
     downloads
-        .iter()
+        .into_iter()
         .progress()
         .with_prefix("Grouping by date")
         .with_style(progress_style.clone())
         .with_finish(indicatif::ProgressFinish::AndLeave)
         .for_each(|dl| {
-            for download in &dl.downloads {
+            let name = Arc::new(dl.name);
+            let downloads = dl.downloads;
+            for download in downloads {
                 grouped.entry(download.date).or_default().push(GemDownload {
-                    name: &dl.name,
+                    name: Arc::clone(&name),
                     total_downloads: download.total_downloads,
                     daily_downloads: download.daily_downloads,
                 });
             }
         });
-    let mut dates: Vec<_> = grouped.into_iter().collect();
-    dates.sort_by_key(|(date, _)| *date);
-    dates
+
+    grouped.into_iter().collect()
 }
 
 fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<String>> {
@@ -241,8 +245,15 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
             .collect::<Result<HashSet<_>, _>>()
             .unwrap();
 
+        let yank_names = std::fs::read_to_string("yanks.txt")
+            .unwrap_or_else(|_| panic!("Failed to open yanks.txt"))
+            .lines()
+            .map(str::to_string)
+            .collect::<HashSet<_>>();
+
         seen_names.extend(err_names);
         seen_names.extend(names);
+        seen_names.extend(yank_names);
         seen_names.into_iter().sorted().collect_vec()
     };
 
@@ -251,12 +262,16 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
         .with_prefix("Downloading better gems")
         .with_finish(indicatif::ProgressFinish::AndLeave);
 
-    let today = Utc::now().naive_utc().date();
+    let today = Utc::now()
+        .naive_utc()
+        .checked_add_offset(FixedOffset::west_opt(8 * 60 * 60).unwrap())
+        .unwrap()
+        .date();
 
     let errors = std::sync::Mutex::new(Vec::<String>::new());
 
     let downloaded = names
-        .par_iter()
+        .into_par_iter()
         .progress_with(progress_bar)
         .filter(|name| {
             let path = better_gem_path(name);
@@ -285,7 +300,6 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
                 })
                 .is_ok()
         })
-        .cloned()
         .collect::<Vec<_>>();
 
     let mut errors = errors.lock().unwrap();
@@ -356,13 +370,13 @@ fn download(sqlite_path: Option<PathBuf>) {
     let names = download_better_gems(progress_style.clone()).unwrap();
 
     let downloads = names
-        .par_iter()
+        .into_par_iter()
         .progress()
         .with_prefix("Parsing json files")
         .with_style(progress_style.clone())
         .with_finish(indicatif::ProgressFinish::AndLeave)
         .map(|name| {
-            let path = better_gem_path(name);
+            let path = better_gem_path(&name);
             let better_gems = parse_better_gem_file(&path).unwrap_or_else(|e| {
                 println!("Error parsing {}: {}", path, e);
                 vec![]
@@ -371,7 +385,7 @@ fn download(sqlite_path: Option<PathBuf>) {
         })
         .collect::<Vec<_>>();
 
-    let dates = group_downloads(&downloads, &progress_style);
+    let dates = group_downloads(downloads, &progress_style);
     dates
         .par_iter()
         .progress()
