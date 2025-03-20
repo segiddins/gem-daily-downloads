@@ -4,7 +4,6 @@ use std::collections::HashSet;
 use std::fs;
 use std::num::NonZeroUsize;
 use std::path::PathBuf;
-use std::sync::Arc;
 
 use anyhow::Context;
 use chrono::FixedOffset;
@@ -74,35 +73,24 @@ enum Commands {
     },
 }
 
-#[derive(Debug, Deserialize)]
-struct BetterGem {
-    date: NaiveDate,
-    total_downloads: i64,
-}
-
-#[derive(Debug, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 struct Download {
     date: NaiveDate,
     total_downloads: i64,
     daily_downloads: Option<i64>,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 struct GemDownload {
-    name: Arc<String>,
+    name: String,
     total_downloads: i64,
+    #[serde(skip_deserializing)]
     daily_downloads: Option<i64>,
 }
 
-#[derive(Debug, Deserialize)]
-struct DeGemDownload {
-    name: String,
-    total_downloads: i64,
-}
-
-fn parse_better_gem_file(file_path: &str) -> anyhow::Result<Vec<BetterGem>> {
+fn parse_better_gem_file(file_path: &str) -> anyhow::Result<Vec<Download>> {
     let file = std::fs::read_to_string(file_path)?;
-    let mut better_gems: Vec<BetterGem> = serde_json::from_str(&file)?;
+    let mut better_gems: Vec<Download> = serde_json::from_str(&file)?;
     better_gems.sort_by_key(|bg| bg.date);
     Ok(better_gems)
 }
@@ -112,7 +100,7 @@ struct Downloads {
     downloads: Vec<Download>,
 }
 
-fn better_gems_to_downloads(name: String, better_gems: Vec<BetterGem>) -> Downloads {
+fn better_gems_to_downloads(name: String, better_gems: Vec<Download>) -> Downloads {
     if better_gems.is_empty() {
         return Downloads {
             name,
@@ -184,11 +172,10 @@ fn group_downloads(
         .with_style(progress_style.clone())
         .with_finish(indicatif::ProgressFinish::AndLeave)
         .for_each(|dl| {
-            let name = Arc::new(dl.name);
             let downloads = dl.downloads;
             for download in downloads {
                 grouped.entry(download.date).or_default().push(GemDownload {
-                    name: Arc::clone(&name),
+                    name: dl.name.clone(),
                     total_downloads: download.total_downloads,
                     daily_downloads: download.daily_downloads,
                 });
@@ -204,12 +191,12 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
 
     // Add names from most recent CSV, so we don't lose data for yanked gems
     let names = {
-        let names: HashSet<String> = client
+        let names: HashSet<_> = client
             .get(names_url)
             .send()?
             .text()?
             .split('\n')
-            .map(str::to_string)
+            .map(String::from)
             .collect();
 
         let mut seen_names = std::fs::read_dir(std::path::Path::new("dates"))?
@@ -226,12 +213,12 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
             .flat_map(|entry| {
                 let mut rdr =
                     csv::Reader::from_path(entry.path()).expect("Could not read CSV file");
-                rdr.deserialize::<DeGemDownload>()
+                rdr.deserialize::<GemDownload>()
                     .filter_map_ok(|record| Some(record.name))
                     .collect::<Result<HashSet<_>, _>>()
             })
             .reduce(
-                || HashSet::<String>::new(),
+                || HashSet::<_>::new(),
                 |mut acc, names| {
                     acc.extend(names);
                     acc
@@ -248,7 +235,7 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
         let yank_names = std::fs::read_to_string("yanks.txt")
             .unwrap_or_else(|_| panic!("Failed to open yanks.txt"))
             .lines()
-            .map(str::to_string)
+            .map(String::from)
             .collect::<HashSet<_>>();
 
         seen_names.extend(err_names);
@@ -275,14 +262,15 @@ fn download_better_gems(progress_style: ProgressStyle) -> anyhow::Result<Vec<Str
         .progress_with(progress_bar)
         .filter(|name| {
             let path = better_gem_path(name);
-            if serde_json::from_str::<Vec<BetterGem>>(
+            if serde_json::from_str::<Vec<Download>>(
                 &std::fs::read_to_string(&path).unwrap_or("[]".to_owned()),
             )
             .is_ok_and(|d| {
                 d.first()
-                    .unwrap_or(&BetterGem {
+                    .unwrap_or(&Download {
                         date: NaiveDate::from_ymd_opt(2000, 1, 1).unwrap(),
                         total_downloads: 0,
+                        daily_downloads: None,
                     })
                     .date
                     == today
@@ -468,16 +456,16 @@ fn date_path(date: NaiveDate) -> String {
     format!("dates/{}/{:02}/{}.csv", date.year(), date.month(), date)
 }
 
-fn read_gem_downloads(date: NaiveDate) -> anyhow::Result<HashMap<String, DeGemDownload>> {
+fn read_gem_downloads(date: NaiveDate) -> anyhow::Result<HashMap<String, GemDownload>> {
     let path = date_path(date);
     let file = fs::File::open(&path).with_context(|| format!("Failed to open file {}", path))?;
     let mut rdr = csv::Reader::from_reader(file);
 
     let deserialized = rdr
-        .deserialize::<DeGemDownload>()
+        .deserialize::<GemDownload>()
         .fold_ok(
             HashMap::new(),
-            |mut hm: HashMap<String, DeGemDownload>, gd| {
+            |mut hm: HashMap<String, GemDownload>, gd| {
                 hm.insert(gd.name.to_string(), gd);
                 hm
             },
