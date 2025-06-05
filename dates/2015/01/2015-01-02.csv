@@ -73,6 +73,7 @@ AtomicTV,4079,16
 Auth42,446,4
 Authorizr,4854,19
 Auto,377,0
+AutoLocale,3360,24
 AutoNZB,11056,15
 AutoNic,3478,27
 AutoZest,4290,14
@@ -143,6 +144,7 @@ Buildr,2271,11
 BxMS,3972,22
 Byclosure-common_steps,830,38
 CCHIT-xds-facade,280,2
+CConvert,286,3
 CFPropertyList,1164154,4272
 CFPropertyList-rails,9411,12
 CITIEsForRAILS,7315,16
@@ -152,6 +154,7 @@ CRUDtree,3656,17
 CSApi,3424,34
 CSI,928,11
 CSV-datagen,5528,26
+CSV2Object,530,25
 CTM__T9_Studio_Game,1167,10
 CVEasy,1998,11
 CacheBar,4611,36
@@ -360,6 +363,7 @@ EyeEmConnector,2845,51
 F2C,539,81
 FBDistributedNotification,1944,21
 FCleaner,465,63
+FacebookOnRails,2410,39
 FakeWeb,104072,1135
 FanSQS,322,18
 FarsiFu,1737,20
@@ -434,6 +438,7 @@ GTof-ruby-do-notation,242,11
 GUI-graticule,1211,68
 GUI-mini_magick,252,12
 GUnit,15530,140
+GaNuong,275,26
 Galleriffic,1091,47
 GameGrid,4010,215
 Game_Over,371,23
@@ -470,6 +475,7 @@ GpsTrail,1763,12
 GraDA,1870,37
 Graphiclious,21238,74
 GraphvizR,16547,106
+GridVid,3262,54
 GrokITunes,3296,27
 GtkSimpleLayout,1604,11
 GunnyLog,3715,247
@@ -626,6 +632,8 @@ Knuckleheads,156,3
 KonaLast,575,10
 KonichiwaAki,847,7
 Krakken,2776,3
+LIBIS_Workflow,425,3
+LIBIS_Workflow_Mongoid,84,0
 LMG_modbus,4364,16
 LOLastfm,7716,58
 LOLsp,770,6
@@ -818,6 +826,7 @@ P4Ruby-mingwx86,376,2
 P5_T_34,199,7
 PBYF,874,3
 PCS_pomodoro,653,3
+PDF,1500,7
 PD_x12,4131,12
 POpen4,1264813,396
 POpen4-mingw,1052,4
@@ -934,10 +943,12 @@ RSokoban,5596,54
 RSpec-Steps,1241,12
 RTALib,422,0
 RTFMd,35662,366
+RTask,58779,503
 RTop,1260,19
 RUIC,2343,100
 RUL,3859,32
 RXAAL,1452,4
+RZM,1966,25
 RaaS,795,14
 Rack,52681,589
 RackMotion,1695,10
@@ -967,6 +978,7 @@ Recipes,706,3
 RedAdmiral,1141,5
 RedCloth,2614540,2376
 RedNails,1499,5
+Redbunny,723,32
 RedcapAPI,1329,20
 Redir,20216,216
 RegExpr,2245,11
@@ -1410,6 +1422,7 @@ a2ws,9219,2
 a2z,34172,15
 a4nt,15317,8
 a4tools,499,2
+a50c,4224,29
 a9n,53047,51
 a9s,7387,7
 a9s_rabbitmq,832,2
@@ -1459,6 +1472,7 @@ aasm_progressable,1726,3
 aasm_statecharts,1822,3
 aasmith-yodlee,840,3
 aastra_xml_api,2435,12
+aavkontakte,27708,7
 aavkontakte-rails3,36346,10
 aaww,66,3
 ab,6127,1
@@ -1475,6 +1489,7 @@ abacus_count,33001,2
 abaddon,19479,5
 abak-flow,79046,39
 abanalyzer,53792,21
+abb,8411,2
 abbey,20195,4
 abc,11140,3
 abc-adapters,15569,6
@@ -1570,10 +1585,12 @@ abstracta,113,2
 abstractable,1120,8
 abstraction,25069,5
 abstractor,11896,38
+abstractstack,17690,5
 absurdity,18271,5
 abt,24409,5
 abtain_billing,21441,6
 abtest,8311,19
+abtte,1628,6
 abuiles-geokit,6652,1
 abundance,168141,37
 abyss,36524,9
@@ -1581,6 +1598,7 @@ ac-summarization-utils,2048,0
 ac_hiya_ankit_chachada,5163,1
 ac_uniquify,3946,2
 aca-device-modules,1002,7
+acacia,10395,5
 academic_degree,873,3
 academico,14187,6
 acamargo-geoip_city,13874,3
@@ -1619,6 +1637,7 @@ access_stack,496,1
 accessibility_bridge,8643,2
 accessibility_core,54512,22
 accessibility_keyboard,5925,3
+accessible-hash,6297,16
 accessible_attribute_matcher,17262,4
 accessible_attributes,42852,11
 accessible_for,33055,9
@@ -1691,12 +1710,14 @@ acl9,104615,53
 acl_plugin,6891,1
 acl_system2,15808,4
 aclatraz,39232,12
+acli,411,1
 acluscraper,1285,4
 acmcommits,107092,36
 acme,22954,10
 acme-bleach,17033,7
 acme-heisenberg,4916,2
 acme-leeway,5049,2
+acme-method_missing,2160,4
 acme-smileage,1069,3
 acme_japanese_av_actress,6964,1
 acms_ruby,936,2
@@ -1735,6 +1756,7 @@ act_as_enumerable,16709,7
 act_as_importable,39351,13
 act_as_menu,955,1
 act_as_nameable,15616,5
+act_as_notificable,263,2
 act_as_releasable,26031,9
 act_as_serializable,798,1
 act_as_time_as_boolean,19874,17
@@ -1776,6 +1798,7 @@ action_mailer_auto_url_options,479,4
 action_mailer_cache_delivery,62571,46
 action_mailer_deliver_later,18011,5
 action_mailer_provider,805,2
+action_mailer_stop,1274,1
 action_mailer_test_mailing,6592,2
 action_mailer_test_via_smtp,16228,4
 action_mailer_tls,16273,1
@@ -1878,6 +1901,7 @@ active-record-without-callbacks,21399,8
 active-redis,16452,4
 active-resource-pagination,8402,10
 active-rets,1026,1
+active-table,586,3
 active-tracker,4770,2
 active-triples,14795,51
 active_access,5392,2
@@ -1928,6 +1952,7 @@ active_collab,6898,4
 active_collection,32173,9
 active_column,31261,8
 active_component,2519,1
+active_concerns,3364,10
 active_conductor,23690,7
 active_configuration,12690,4
 active_connection,1396,5
@@ -1966,6 +1991,7 @@ active_fedora_finders,26303,12
 active_fedora_relsint,16408,5
 active_fedora_streamable,19200,7
 active_file,6289,9
+active_file_jp,2310,7
 active_file_record,515,0
 active_filter,29908,12
 active_finite,56981,16
@@ -1996,6 +2022,7 @@ active_ldap-dynamic_finders,896,1
 active_leonardo,36869,18
 active_link_to,253106,282
 active_list,9958,22
+active_lock,1700,4
 active_logic,515,2
 active_lucene,24058,8
 active_mac,6387,1
@@ -2066,6 +2093,7 @@ active_null,1752,6
 active_null_object,1285,4
 active_nutrition,13960,5
 active_olap,22567,5
+active_patterns,3871,12
 active_paypal_adaptive_accounts,7672,2
 active_paypal_adaptive_payment,140804,85
 active_poro,1611,8
@@ -2099,6 +2127,7 @@ active_record_content_blob,8851,15
 active_record_csv,17033,4
 active_record_defaults,8122,1
 active_record_disabler,3770,7
+active_record_dummy,765,6
 active_record_encoding,6240,2
 active_record_enumerated_type,3646,9
 active_record_events,509,3
@@ -2112,6 +2141,7 @@ active_record_ignored_attributes,21754,7
 active_record_immutable,1106,2
 active_record_inherit_assoc,11936,6
 active_record_inline_schema,57282,19
+active_record_install,1837,14
 active_record_migrations,11334,27
 active_record_mocks,2542,6
 active_record_model_and_rspec_enhanced_templates,1395,8
@@ -2276,6 +2306,8 @@ activeadministration,1148,2
 activeapi,9760,3
 activeasync,15757,5
 activeaudit,24872,9
+activebusiness,246,1
+activecalendar,5050,1
 activecleaner,5382,6
 activeconfig,27517,7
 activecontext,8975,4
@@ -2411,6 +2443,7 @@ activerecord-diff,33083,63
 activerecord-disable-inverse-of-heuristics,501,2
 activerecord-draft_records,37778,10
 activerecord-duplicate,32592,9
+activerecord-dynamic,693,1
 activerecord-embedding,5215,2
 activerecord-endoscope,2702,6
 activerecord-enum-without-methods,829,1
@@ -2422,6 +2455,7 @@ activerecord-extensions,5876,3
 activerecord-fast-import,25812,7
 activerecord-fast-import2,5796,2
 activerecord-fb-adapter,29417,30
+activerecord-fdbsql-adapter,1537,5
 activerecord-fixture_builder,1314,1
 activerecord-fusion,4888,2
 activerecord-futures,25775,9
@@ -2429,6 +2463,7 @@ activerecord-has_count,1695,11
 activerecord-hbase-adapter,776,3
 activerecord-hierarchical_query,1653,6
 activerecord-hive-adapter,794,4
+activerecord-hstore_primitives,2269,3
 activerecord-hstore_properties,30686,12
 activerecord-humanized_errors,2303,5
 activerecord-import,1148022,734
@@ -2580,6 +2615,7 @@ activerecord_mysql_strict,4850,6
 activerecord_null_object,10717,4
 activerecord_outer_joins,1097,1
 activerecord_partitioning,14381,19
+activerecord_pg_attachments,1999,9
 activerecord_pg_stuff,977,1
 activerecord_plurals,5520,2
 activerecord_random,13264,3
@@ -2692,6 +2728,7 @@ acts-as-list,20546,32
 acts-as-messageable,89640,31
 acts-as-mobile,5809,1
 acts-as-optionable,54396,16
+acts-as-poomvoom,740,2
 acts-as-rated,5776,2
 acts-as-savable,4639,1
 acts-as-taggable-array-on,2793,6
@@ -2966,6 +3003,7 @@ acts_as_runnable_code,16548,4
 acts_as_sane_tree,54797,17
 acts_as_sanitiled,38563,11
 acts_as_sanitizable,4896,16
+acts_as_scaffold,23474,7
 acts_as_scd,1307,4
 acts_as_scribe,5476,2
 acts_as_sdata,10643,2
@@ -3053,6 +3091,7 @@ acts_as_xapian,8301,3
 acts_as_xls,14812,9
 acts_as_xlsx,55506,30
 acts_has_many,16033,11
+acts_less_rateable,2262,1
 acts_more_seo,50760,35
 acts_permissive,15491,9
 acts_presentably,3002,2
@@ -3152,6 +3191,7 @@ adapter_extensions,46685,30
 adaptive,996,2
 adaptive-evil-blocks-rails,1678,6
 adaptive_pay,7219,4
+adaptive_payments,2235,1
 adaptly-cube,2557,1
 adaptrex,6091,4
 adauth,30922,18
@@ -3168,6 +3208,7 @@ adcopy,13142,10
 add,162,4
 add-to-homescreen-rails,27870,82
 add-to-org,802,7
+add_another,6397,15
 add_gem,2540,5
 add_http_header,2774,7
 add_symbolic_names,2572,9
@@ -3240,6 +3281,7 @@ adhearsion_sequel,2137,3
 adhearsion_sinatra,962,3
 adherence,4082,6
 adherent,10362,47
+adhoc,9055,11
 adhoc-generators,3543,10
 adhoc_script,1901,4
 adhocracy,2610,12
@@ -3255,6 +3297,7 @@ adiwg-mdtranslator,1623,20
 adjectifier,5089,6
 adjustable_mime_type,5842,6
 adjustment_bureau,545,3
+adjustn,2904,6
 adjutant,567,19
 adknowledge,4877,10
 adkron-data_bank,357,3
@@ -3275,6 +3318,7 @@ admin-theme,3308,5
 admin-vmc-plugin,9558,17
 admin_assistant,46060,69
 admin_bits,127,4
+admin_control_tower,3951,6
 admin_data,113520,124
 admin_engine,3890,8
 admin_fu,2361,3
@@ -3348,6 +3392,7 @@ adva-markup,28960,41
 adva-static,28430,38
 adva-user,25006,36
 advanced-fileutils,2782,3
+advanced_clipboard,658,4
 advanced_errors,2910,3
 advanced_haml_scaffold_generator,315,3
 advanced_hash_keys,2388,2
@@ -3443,6 +3488,7 @@ aesop,621,9
 aesthetics,0,78
 aether,9966,29
 aetherical_utils,7444,8
+aethon,2105,3
 af,119961,78
 af-addon-tester,13200,20
 af-cache-money,2627,4
@@ -3505,6 +3551,7 @@ age,3183,10
 age_cal,1053,3
 age_calculator,813,4
 age_de_xml,948,14
+age_wizard,6939,10
 ageism,1282,3
 agency,1408,3
 agenda,6132,7
@@ -3535,6 +3582,7 @@ aggregator,774,3
 aggregator-gem,10414,14
 aggrobot,1777,7
 aggtive_record,6399,24
+agharta,6284,17
 agibralter-factory_girl,353,4
 agibralter-jammit,2518,3
 agideo-pinyin,4337,5
@@ -3568,6 +3616,7 @@ agnostic-will_paginate,9382,2
 agnostic_presenters,5552,6
 agnostic_slugs,842,13
 ago,3488,3
+agora,2723,4
 agoravoting-rb,813,3
 agouti,940,9
 agqr-recorder,510,3
@@ -3616,6 +3665,8 @@ ahoy,14793,21
 ahoy_email,6813,37
 ahoy_events,2240,12
 ahoy_matey,19630,146
+ahp,2623,4
+ahp-linalg,2519,4
 ahprocess,114,4
 ai4r,48948,62
 ai4ruby,7582,14
@@ -3623,6 +3674,7 @@ aiaio-active_resource_throttle,689,8
 aiaio-harvest,986,8
 aiakos,618,2
 aiddata,716,2
+aidi-metropage,886,3
 aidir,4300,20
 aidmock,8855,13
 aids_info,2110,3
@@ -3660,6 +3712,7 @@ airbox,974,3
 airbrake,3560098,2464
 airbrake-api,37669,58
 airbrake-faraday_sender,3412,3
+airbrake-graylog2,4721,12
 airbrake-local,5205,25
 airbrake-resque,3403,3
 airbrake-sinatra,3052,7
@@ -3881,6 +3934,7 @@ alea,4627,7
 aleenee,335,4
 aleenee-rails,234,2
 alef-rails,1018,4
+alego,27312,69
 alego_functions,3840,9
 alego_report,11484,28
 alegscogs-asset_library,2685,3
@@ -3979,6 +4033,7 @@ alg-paperclip,4907,6
 algebrick,25921,53
 algerb,7015,14
 alglib,9633,11
+algoassist,404,3
 algol,964,4
 algoliasearch,47183,159
 algoliasearch-rails,55100,244
@@ -3997,6 +4052,7 @@ alias_to_method,623,3
 aliasing,560,3
 aliastable,1200,4
 alib,9731,12
+alibaba-kfc,4671,28
 alice,9629,13
 alice_invoice,2567,2
 alicorn,30530,56
@@ -4027,6 +4083,7 @@ all-your-base,7051,10
 allPositions,1513,6
 all_crypt,939,2
 all_green,2890,7
+all_locales,139,10
 all_seeing_eye,39952,66
 all_seeing_pi,800,11
 all_sorts,2890,8
@@ -4092,6 +4149,7 @@ almaz-revelation,4761,5
 almicube,3641,21
 almodovar,50265,98
 almodovar-server,632,3
+almond,2303,3
 almost-happy,22316,33
 almostfu,906,4
 almundo-business-domain,432,7
@@ -4101,8 +4159,10 @@ aloe,840,5
 aloha,4365,15
 aloha-rails,4565,4
 aloha-rails-improved,2120,5
+aloha-ruby-conf,8016,21
 aloha_analyzer,24185,155
 aloha_rails,4536,5
+aloha_world,1619,6
 aloharb,1930,2
 alondra,6823,11
 alongslide,3421,31
@@ -4120,8 +4180,10 @@ alpha-simprini-engine,7422,13
 alpha_card,4697,40
 alpha_omega,857776,815
 alpha_pag,1693,3
+alphabar,10584,21
 alphabeta,1230,3
 alphabetic_paginate,10648,38
+alphabetical_hash,1027,3
 alphabetical_paginate,30955,111
 alphabetify,527,6
 alphabetize,6205,16
@@ -4172,6 +4234,7 @@ altria,1929,5
 altum,3750,6
 alu4103_expregulares,1366,3
 alu4103_tictactoe,1372,3
+alu4216tictactoe,1419,4
 alucard,539,3
 alula,51957,108
 alula-plugins,35240,76
@@ -4274,12 +4337,14 @@ amee,76532,119
 amee-analytics,12201,21
 amee-data-abstraction,22052,41
 amee-data-persistence,19009,32
+amee-ruby,2178,2
 amee_rails_layer,16405,23
 amember_pro,1682,13
 amend,235,0
 amendia_remote,1656,11
 america,275,5
 american_date,492828,394
+american_idol,2439,4
 americommerce-api,5036,25
 amerine-btexty,992,10
 ames_by_type,1311,6
@@ -4343,6 +4408,7 @@ amphibian,5551,9
 ampk,925,2
 ample_assets,7675,16
 amplify,6132,14
+amplitude,556,3
 ampt,9465,8
 ampv,5711,31
 amq-client,527688,185
@@ -4370,6 +4436,7 @@ amqurl,467,3
 amr_google_calendar,1317,4
 amrita2,9009,11
 amtrak,272,8
+amulet,4608,3
 amy,1809,9
 amzwish,2257,3
 an,6337,8
@@ -4556,6 +4623,7 @@ angular_sprinkles,9480,87
 angular_ui_tree_rails,1590,13
 angular_velocity,1578,3
 angular_xss,798,3
+angularjs-bootstrap-rails,1163,2
 angularjs-file-upload-rails,1699,15
 angularjs-foundation-rails,442,3
 angularjs-on-rails,771,6
@@ -4653,6 +4721,7 @@ anodator,5219,9
 anomaly,6737,13
 anonymize,946,2
 anonymizer,6702,9
+anorexic,6891,100
 another,6793,8
 another_brick,5729,22
 another_echonest_ruby_api,1229,7
@@ -4675,6 +4744,7 @@ ansi_art,1865,4
 ansi_chameleon,6548,12
 ansi_codes,920,3
 ansi_colors,7393,12
+ansi_colours,3174,7
 ansi_stream,1385,10
 ansi_utils,4560,7
 ansible,13273,12
@@ -4691,6 +4761,7 @@ ansiblerepo-builder,806,7
 ansify,3406,5
 ansirc,3216,7
 ansitags,7080,8
+ansj_seg-jruby,1148,7
 ansr,1847,11
 ansr_blacklight,1344,9
 ansr_dpla,890,8
@@ -4729,6 +4800,7 @@ anti_rest,1408,4
 anti_spam,381,6
 anticaptcha-anti-captcha,329,3
 anticipate,24059,44
+antidote,2327,12
 antigate,3803,5
 antigate_api,4370,14
 antigate_rb,513,3
@@ -4799,11 +4871,13 @@ ap4r,25972,35
 ap_active_merchant,1726,3
 ap_command,5188,12
 ap_dates,4245,5
+apa,145,3
 apache-authtkt,1018,5
 apache-config-generator,21591,31
 apache-loggen,4409,9
 apache-vhosts-parser,1484,9
 apache_config,9588,14
+apache_configuration_maker,2501,15
 apache_image_resizer,11670,24
 apache_log-parser,1328,13
 apache_log_parser,4430,6
@@ -5001,6 +5075,7 @@ app-ctx,8968,12
 app-deploy,13654,18
 app-deployer,969,3
 app-mgr,32935,50
+app-oil,15000,22
 app-racket,1761,3
 app-reviews,3209,5
 app-routes,27675,53
@@ -5012,6 +5087,8 @@ app-version-git,6294,14
 app-yml-rails,4750,8
 app2engine,11066,12
 app42,8502,43
+appMobiBuild,1415,4
+appMobiPush,1396,3
 app_attributes,7246,13
 app_box,4389,12
 app_conf,56775,84
@@ -5068,6 +5145,7 @@ appcss,6534,63
 appdirect,363,6
 appdoc,8707,14
 appdraft,1002,4
+append_to_line,553,3
 appengine-apis,83919,101
 appengine-jruby-jars,19244,17
 appengine-mapreduce,6084,10
@@ -5148,6 +5226,7 @@ applied,393,6
 applied_css,3663,13
 applinks,6757,37
 applix,31179,56
+applogger-ruby,1662,10
 appmake,72900,204
 appmath,2335,3
 appmonitor,964,26
@@ -5199,6 +5278,7 @@ appsta,4645,6
 appstats,164057,282
 appstorm_concatenator,1871,3
 appswarm,2309,2
+apptamers-bootstrap,3004,13
 apptap,2978,5
 appthwack,988,4
 appurify,2175,9
@@ -5211,6 +5291,7 @@ apricot,1746,7
 apricoteatsgorilla,10995,16
 april,2349,3
 april_oneil,1434,5
+aprilfool,2704,7
 apriori,4671,6
 apriori-algorithm,526,5
 apriori-rails,2963,11
@@ -5220,6 +5301,7 @@ aprova_facil,8421,16
 aproxacs-s3sync,12632,12
 aproxacs-sms_client,900,8
 aproxacs-storyq_client,1472,16
+aprs,1827,2
 aprs-is,273,2
 apruve,1986,14
 apsis,2350,6
@@ -5239,6 +5321,7 @@ aptible-prawn-helpers,292,3
 aptible-rails,15901,152
 aptible-resource,8724,64
 aptible-tasks,11768,50
+aptible-toolbelt,1216,17
 aptinabox,753,2
 aptinio-bdoc,611,6
 aptly,516,4
@@ -5424,6 +5507,7 @@ archive-tar,3310,3
 archive-tar-external,13411,21
 archive-tar-minitar,3249485,1492
 archive-tar2,1863,3
+archive-tarsimple,7493,9
 archive-utils,259,3
 archive-zip,67284,36
 archive_2s,10061,17
@@ -5443,6 +5527,7 @@ arctica-autorization-rails-plugin,1711,4
 arcticelvis,646,3
 arcus,14992,41
 ardb,18455,71
+ardbt,2181,11
 ardekantur-gantty,2082,22
 ardekantur-shnork,320,2
 ardekantur-taskomaly,311,4
@@ -5504,6 +5589,7 @@ arg0,3129,10
 argentine_holidays,1650,11
 argh,4695,10
 argible,4413,8
+arginine,1092,12
 argonaut,4102,7
 argos,611,3
 argos-ruby,9044,53
@@ -5554,6 +5640,7 @@ ark_tweet_nlp,2010,22
 arkadyan-color_palette,622,5
 arkayne_rails,2256,3
 arke,2394,16
+arkush-extensions,713,9
 arldap,1758,2
 arlj,254,7
 arm,1804,2
@@ -5666,6 +5753,8 @@ arsh,22377,86
 arson,2549,7
 arspy,14962,43
 arst,1818,13
+arsth,884,10
+art,975,6
 art-decomp,13128,36
 art_deco,1399,18
 art_typograf,1399,6
@@ -5689,6 +5778,7 @@ arthurgeek-twitter,302,5
 arti,785,5
 arti_mark,1232,0
 artichoke,93,5
+articulate,754,6
 artifact,203,7
 artifact_logger,13226,50
 artifactory,9415,82
@@ -5813,7 +5903,9 @@ ascii-image,3818,17
 ascii-passport,1787,6
 ascii-tracker,1728,12
 ascii_charts,16502,15
+ascii_counter.gemspec,69,7
 ascii_data,6747,22
+ascii_doc_web,3351,11
 ascii_heart,1787,7
 ascii_it,581,5
 ascii_paint,1029,13
@@ -5865,6 +5957,7 @@ asian_character_image,1169,13
 asiasearch,5292,17
 asigbiophys,3204,21
 asin,58563,164
+asio,5698,39
 asip-meteor,9719,199
 asir,33829,187
 asir_activerecord,1340,4
@@ -6019,6 +6112,7 @@ asset_uploader,2956,11
 asset_watcher,4158,8
 assetable,5794,66
 assetbuild,2253,6
+assetbundler,2155,5
 assetify,17554,63
 assets,2277,6
 assets-compiler,6768,20
@@ -6069,6 +6163,7 @@ ast_ast,7986,22
 astaire,6766,20
 astapor,1562,20
 astar,2508,10
+astatus,355,5
 astdb,1371,6
 aster,1686,27
 asterank-ruby,493,5
@@ -6116,6 +6211,7 @@ async-rails,12508,117
 async_enum,2102,18
 async_io,2594,33
 async_job,1859,6
+async_logger,1252,11
 async_methods,8135,24
 async_observer,2337,6
 async_partial,10208,34
@@ -6162,6 +6258,7 @@ ateam-merb-auth-old,2369,46
 ateam-rspec_merb_helpers,1205,25
 atech,25208,106
 atech-billy,21057,91
+atech-charlie,18338,90
 atech-network-log-io,1751,6
 atech_cloud,16802,62
 atech_docs,3576,12
@@ -6187,6 +6284,7 @@ atlantis,876,7
 atlantispro,4937,17
 atlas,1949,7
 atlas-api,7110,58
+atlas-client,2005,0
 atlas2ipynb,3613,51
 atlas_assets,54881,522
 atlas_client,3484,12
@@ -6254,6 +6352,7 @@ attachment_on_the_fly,362603,71
 attachment_saver,2321,12
 attachments,29894,92
 attachmerb_fu,2261,6
+attachr,8402,26
 attachs,3426,41
 attack,831,8
 attack-barometer,2050,40
@@ -6284,6 +6383,7 @@ attr_cached,2652,19
 attr_callback,2246,4
 attr_cleaner,11773,36
 attr_comparable,1801,14
+attr_configurable,5030,7
 attr_default,15358,50
 attr_defaultable,2027,18
 attr_defaults,692,17
@@ -6298,12 +6398,14 @@ attr_encryptor,38114,69
 attr_enum,2111,5
 attr_enum_accessor,7006,11
 attr_enumerator,8533,34
+attr_ex,3485,10
 attr_extras,38500,234
 attr_hash_accessor,9577,23
 attr_immutable,5862,21
 attr_inherited,1620,5
 attr_initializable,2536,23
 attr_inject,996,5
+attr_lazy,1827,11
 attr_memoizer,1278,6
 attr_permit,1137,24
 attr_plus,8708,30
@@ -6318,6 +6420,7 @@ attr_secure,6501,51
 attr_similar,1957,17
 attr_symbol,9569,24
 attr_typecastable,214,5
+attr_unit,4269,26
 attr_uuid,480,6
 attr_validator,2236,32
 attr_vault,1494,46
@@ -6488,6 +6591,7 @@ austinmoody-fogbugz-api,883,16
 australia_postcode,4020,22
 australium,761,11
 auswalk-uniquify,2087,6
+auteur,3473,12
 auth,10320,36
 auth-assistant,2220,5
 auth-hmac,10992,22
@@ -6507,6 +6611,7 @@ auth_passport_checkpoint,24692,270
 auth_passport_office,10698,131
 auth_redis_user_connector,1861,45
 auth_scope,510,6
+auth_users,1645,5
 authbox,954,44
 authbuttons-rails,7460,5
 authcan_easyroller,10368,26
@@ -6729,6 +6834,7 @@ automated-commands,3985,25
 automated_metareview,1517,12
 automateit,60910,163
 automatic,20198,168
+automatic-client,2253,26
 automatic_foreign_key,27624,69
 automation_object,151,7
 automaton,2222,5
@@ -6778,6 +6884,7 @@ autosize,1739,18
 autosize-rails,13013,55
 autospec.watchr,8017,26
 autostacker24,0,468
+autostart,2455,26
 autostats,3137,12
 autosub,4348,11
 autosuggest-rb,10168,36
@@ -6785,6 +6892,7 @@ autotab-rails,1586,24
 autotable,1164,15
 autotag,1139,6
 autotask,2222,7
+autotaskcrm,4539,24
 autotest,604442,381
 autotest-aniki,1672,6
 autotest-clear,3029,13
@@ -6888,9 +6996,11 @@ avmuresan-product_api,885,8
 avo-setup,54509,177
 avocado,20014,206
 avocado-docs,1266,28
+avocado-sass,1306,39
 avod,686,6
 avodeploy,517,17
 avoid_has_permalink_duplicates,502,11
+avoscloud,452,6
 avospush,200,5
 avro,58843,97
 avro-jruby,753,7
@@ -6932,6 +7042,7 @@ awesome_print_carrier_wave_uploader,492,6
 awesome_print_colors,2092,7
 awesome_print_motion,5309,11
 awesome_pry,635,8
+awesome_rails_flash_messages,1696,5
 awesome_scrub,1566,21
 awesome_search,4262,13
 awesome_sms,628,14
@@ -7005,6 +7116,7 @@ aws-sdk-elb-tagging,435,7
 aws-sdk-euca,1257,6
 aws-sdk-resources,15234,221
 aws-sdk-v1,846867,4253
+aws-security-group-state,3161,13
 aws-ses,519866,373
 aws-ses-rails31,4487,13
 aws-sessionstore-dynamodb,1598,6
@@ -7023,6 +7135,7 @@ aws_cloud_map,4323,13
 aws_cloud_search,13797,15
 aws_config,1359,11
 aws_cred_vault,1230,35
+aws_credentials,11049,31
 aws_csshx,6530,30
 aws_deploy,3283,43
 aws_dump,1231,13
@@ -7098,12 +7211,14 @@ axu-i18n-timezones,567,6
 ayadn,21597,376
 ayah_integration,10803,24
 ayanko-watir-webdriver,2211,8
+ayi,3077,33
 ayl,5065,22
 ayl-beanstalk,13100,62
 ayl-rails,7891,27
 aylien_text_api,534,23
 ayn-flickr_fu,1173,24
 ayril,3356,12
+ayrton-rvideo,1262,6
 aysendinblue,426,7
 azebiki,14154,45
 azericard,1367,16
@@ -7132,6 +7247,7 @@ azure_media_service,2466,7
 azurex,907,18
 b,3740,16
 b-lazy,13761,72
+b-list,2272,9
 b001e,3204,6
 b189877-1,695,6
 b2b2dot0-fastercsv,1066,6
@@ -7203,6 +7319,7 @@ backbone-jasmine,1743,7
 backbone-marionette-rails,5505,19
 backbone-mixpanel,1035,4
 backbone-nested-attributes,7968,65
+backbone-on-rails,300385,234
 backbone-paginator,942,6
 backbone-paginator-rails,819,6
 backbone-queryparams-rails,1455,4
@@ -7269,6 +7386,7 @@ backgroundmodule,2134,7
 backgroundrb-rails3,24131,41
 backhead,1398,7
 backitup,2090,8
+backlinks,205,0
 backload,1170,6
 backlog,249564,750
 backlog-api,1736,6
@@ -7301,6 +7419,7 @@ backtracer,40972,121
 backtrack,1776,7
 backtrack-xpath,5923,35
 backtracker,4900,38
+backtracking,295,5
 backtype,5702,20
 backtyper,3600,12
 backup,326046,675
@@ -7309,6 +7428,7 @@ backup-aliyun,1520,14
 backup-baidu,1699,20
 backup-github,3162,12
 backup-gundua,4229,16
+backup-kanbox,794,5
 backup-pants,3969,11
 backup-pcs,1885,26
 backup-rails,3337,35
@@ -7462,6 +7582,9 @@ bake-toolkit,30183,234
 bake.clj,4132,14
 bakedweb-model_notifier,309,5
 baker,5864,18
+baker_street,7942,60
+bakers,1075,5
+bakers-rack,1065,7
 bakery,3056,29
 bakery-core,5020,20
 bakery-theme,1944,6
@@ -7502,8 +7625,10 @@ ballistics,2652,18
 ballmer,874,13
 ballonizer,11965,95
 ballonizer_proxy,5021,41
+balloons,3166,14
 ballot_box,15028,58
 ballou_sms_gateway,3724,23
+balls,1588,6
 baloo,2601,12
 bam,4051,14
 bamboo-cli,7477,30
@@ -7521,6 +7646,7 @@ banalize,5302,37
 banana,5757,26
 banana_docs,2983,25
 banana_peels,3766,32
+banana_phone,3101,17
 banana_split,10132,39
 bananajour,29915,89
 bananasplit,895,8
@@ -7541,6 +7667,7 @@ bandit,16209,57
 bandshell,9802,82
 bandsintown,11169,25
 bandwidth,6517,27
+bandwidth_api,36765,300
 bandy-dci,453,7
 bane,8502,30
 banery_stats,443,7
@@ -7616,6 +7743,7 @@ barby,386187,346
 barby-chunky_png,12749,12
 barby-pdf417,3561,34
 barcade,1304,18
+barclays-bike-london-cli,1116,24
 barclays_bikes,1550,6
 barcode,3383,5
 barcode1dtools,18628,99
@@ -7642,6 +7770,7 @@ barely_searchable,2677,12
 baren,6437,26
 baretest,12632,26
 baretest-vows,4011,11
+barfs,1784,6
 barge,4743,69
 barista,237611,154
 barista_growl,2615,5
@@ -7690,6 +7819,7 @@ barron,4617,19
 bars,15843,65
 bart,2292,13
 bart_waiting_list,296,27
+bartender,11872,44
 bartes-rcov_stats,2010,44
 barthes,5932,213
 barton,3779,16
@@ -7708,6 +7838,8 @@ base.sass,5075,89
 base10-first-floor,571,11
 base10-spec-assist,289,6
 base2_ckeditor,600,6
+base2_cms,422956,1868
+base2_metrics,13845,56
 base31,1927,4
 base31_encoder,1972,7
 base31_guid,1985,7
@@ -7733,11 +7865,13 @@ base_presenter,7132,65
 base_rails_app,2167,4
 base_script,4372,29
 base_x,951,9
+baseball_calc,1166,24
 baseball_scorecard,5508,23
 basecamp,27148,59
 basecamp_wrapper,5935,20
 basecamper,4602,18
 basecampeverest,2193,30
+basecampnext,1145,6
 basecampx,4497,21
 basechip,6213,25
 basecrm,5194,38
@@ -7767,6 +7901,7 @@ basic-sequencer,1539,45
 basic-stats,1002,10
 basic101,620,13
 basic_active_model,7658,7
+basic_api,6235,79
 basic_api_auth,298,6
 basic_assumption,44715,107
 basic_auth_credentials,1383,8
@@ -7881,6 +8016,7 @@ battlestation,12440,16
 battman,525,14
 baudelaire,154,5
 bauhaus,672,7
+bauserhelloworld,485,6
 bauxite,13654,180
 bawsaq,737,5
 baya,3881,23
@@ -7891,6 +8027,7 @@ bayes_on_redis,18478,59
 bayes_on_redis_internal,1567,5
 bayesab,110,6
 bayesball,4465,25
+bayescraft,6441,37
 bayesian_average,2154,13
 bayeux-rack,4932,20
 bayon,11157,34
@@ -8049,6 +8186,8 @@ bdainton-camptweet,299,6
 bdb,18798,75
 bdb1,3160,17
 bdd-legacy,22036,125
+bdd_elements,3300,27
+bdd_server,1071,11
 bddfire,16306,505
 bddgen,8111,35
 bdericks-lightline,300,10
@@ -8153,7 +8292,9 @@ beautified_url,1923,20
 beautiful-css,11075,90
 beautiful_public_key,1040,9
 beautiful_scaffold,30360,207
+beautiful_url,21123,48
 beautifulsoup,1325,10
+beauty,1988,19
 beauty_check,740,7
 beauvoir,1027,7
 beaver,12933,89
@@ -8241,6 +8382,7 @@ before_render,2577,10
 before_test,2349,7
 befunge,134,11
 beg,2340,20
+beget,6317,28
 beggar,8124,36
 begin,1677,27
 beginning_of_fortnight,3706,17
@@ -8426,6 +8568,7 @@ berkshelf_ext,9372,105
 berktacular,3611,88
 berlin,2123,11
 berlin-ai,41974,316
+berliner,205,8
 berlusconi,1095,10
 bermuda,8863,34
 bernoulli,9457,63
@@ -8497,9 +8640,11 @@ better_changelog,216,10
 better_counters,3889,23
 better_csv,974,42
 better_date_picker,1695,39
+better_date_to_s,3136,18
 better_delegation,2291,11
 better_error_message,6535,20
 better_errors,2873661,3229
+better_exception_app,7027,54
 better_form,31958,173
 better_helpers,883,20
 better_jasminerice,859,10
@@ -8524,6 +8669,7 @@ better_robots,2089,17
 better_ross,1579,45
 better_select,5413,43
 better_states_select,1945,12
+better_strings,261,9
 better_strong_params,793,25
 better_struct,222,21
 better_toolbar,588,17
@@ -8568,6 +8714,7 @@ bgetting-hominid,4250,138
 bgetting-rubyrets,285,9
 bgg,999,20
 bgg-api,2218,16
+bgit,949,8
 bgotink-hyde,1653,26
 bgp-tools,3079,44
 bgp4r,38549,147
@@ -8681,9 +8828,11 @@ bigsword,936,17
 bigtextjs_rails,2309,34
 bigtiger-rolex,1139,38
 bigtinker,11785,51
+bigv,1266,20
 bigwig,8161,37
 bijection,5265,36
 bijective,2330,25
+bijin-snap,1019,8
 bijou,2076,10
 biju,2660,18
 bike,5833,28
@@ -8696,6 +8845,7 @@ bilibili_sunday,4075,64
 bill,702,9
 bill_forward,188,10
 billboard,2170,7
+billboard-rb,1678,10
 billboard_chart,2471,35
 billd,4228,24
 biller_bot_resource,9279,131
@@ -8805,6 +8955,7 @@ binman,28941,176
 binneroc,850,20
 binomial,3188,24
 binpack,5903,46
+binpress,2214,18
 binstruct,2181,10
 bintje,495,8
 bintray,673,7
@@ -8911,8 +9062,10 @@ bio-vcf,2528,76
 bio-velvet,2509,91
 bio-velvet_underground,858,19
 bio-wolf_psort_wrapper,2989,16
+biodb,3623,35
 biodiversity,42010,251
 biodiversity19,63864,445
+bioinfo,1134,7
 bioinform,18147,191
 biointerchange,7928,118
 biola_deploy,12866,154
@@ -8922,13 +9075,17 @@ biola_web_services,780,63
 biomart,21105,90
 biome,293,10
 biomodel_client,1687,9
+biopieces,7730,172
 bioportal,6708,17
 biopsy,2184,28
+bioroebe,19007,414
 bioruby-bio,1714,53
 bios,1756,8
 bioseqalign,618,19
+biotcm,1696,0
 bip70,371,10
 bipbip,15288,345
+bipbip-cm,288,11
 bipbop,1158,48
 bipolar,2041,8
 birb,5392,23
@@ -8945,6 +9102,7 @@ birkirb-acts_as_serializable,1692,55
 birkirb-git,588,21
 birkirb-jsonbuilder,1130,31
 birling,3327,27
+birmanizer,766,10
 birr,944,10
 birth_control,2550,35
 birth_date_validator,1241,59
@@ -8985,11 +9143,13 @@ bitbot,3264,34
 bitbot-trader,681,9
 bitbucket,1826,11
 bitbucket-api-extension,1712,18
+bitbucket-backup,6658,53
 bitbucket-cli,1351,20
 bitbucket_api,1774,10
 bitbucket_migration,417,8
 bitbucket_rest_api,23696,56
 bitca,820,16
+bitcache,4257,16
 bitcask,9762,58
 bitclient,4758,29
 bitclust-core,10937,78
@@ -9032,6 +9192,7 @@ bitfinex,241,9
 bitfluent-activemerchant,4201,15
 bitfluent-database_cleaner,2340,9
 bitfluent-vestal_versions,2118,10
+bitgain-mockdata,9840,46
 bitgirder-platform,11564,102
 bitgram-ruby,212,9
 bithavoc-identity,243,9
@@ -9121,6 +9282,7 @@ bixby-client,7978,106
 bixby-common,15895,219
 bixby-provision,2131,36
 bixby_common,1306,10
+biyo,3465,44
 bizarroids_settings,837,26
 bizarroids_slider,1368,50
 bizhours,5996,25
@@ -9308,6 +9470,7 @@ blaxter-lockdown,586,21
 blaxter-rubygems-isitjruby,286,10
 blaz-epp,282,8
 blaze,1359,10
+blaze_cards,408,26
 blazemeter,3113,32
 blazer,862,41
 blazing,69648,322
@@ -9324,6 +9487,8 @@ bleacher_api,6575,54
 bleak_house,58559,251
 bledig-tuersteher,300,10
 bleeding_edge,1684,12
+bleep,1344,110
+bleep-slack,615,58
 bleetz,7783,71
 blekko,4217,27
 blekko-search,7219,63
@@ -9380,6 +9545,7 @@ blippex_api,1114,10
 bliptv,7013,7
 blirb,131244,48
 bliss,8106,49
+blister,2292,9
 blitline,28300,139
 blitz,60754,282
 blitz_smtp,1155,9
@@ -9508,6 +9674,7 @@ blue-resque,12191,144
 blue-resque-scheduler,7556,86
 blue-shell,15480,72
 blue-unicorn,1649,19
+blue_button,971,9
 blue_button_parser,1848,11
 blue_colr,19097,100
 blue_conductor,2030,17
@@ -9557,6 +9724,7 @@ blueprintr,2602,11
 blueprints,70822,274
 blueprints_boy,188,9
 blueshift,1158,16
+bluesnap,246,9
 bluesteel,282,9
 bluestorm_sms,1108,37
 bluetail,291,7
@@ -9686,6 +9854,7 @@ bokmann-crondonkulous,285,9
 bol,514,0
 bola,638,10
 bold,2622,27
+boleto,1316,10
 boleto_bancario,331,0
 boletorb,1599,35
 boletosimples,1886,64
@@ -9698,6 +9867,7 @@ bolster,3841,62
 bolt,13844,61
 bolton-cms-padrino,1930,26
 bolts,124,0
+boltstrap-rails,3276,103
 bolzter,399,23
 bomb_bomb,1654,18
 bomb_defuser,1681,10
@@ -9716,6 +9886,7 @@ bone,17584,77
 bone_tree,13188,92
 boned,19579,96
 bonehead,555,8
+boneidle,1745,7
 bonekit,2532,33
 boner,4289,28
 bones,142246,542
@@ -9802,6 +9973,7 @@ boole_time,3090,18
 boolean,20817,27
 boolean-expression,8964,40
 boolean_accessor,621,10
+boolean_attributes,4206,25
 boolean_bitfields,433,8
 boolean_class,2874,32
 boolean_datepicker,3021,19
@@ -9921,6 +10093,7 @@ bootstrap-tabdrop-rails,521,8
 bootstrap-tagsinput-rails,3807,30
 bootstrap-timepicker-rails,32562,56
 bootstrap-timepicker-rails-addon,7957,53
+bootstrap-toolkit-rails,5965,41
 bootstrap-tooltip-rails,5355,13
 bootstrap-tour-rails,3066,18
 bootstrap-typeahead-rails,10767,57
@@ -9949,6 +10122,7 @@ bootstrap_buttons,1294,19
 bootstrap_calendar_rails,1497,21
 bootstrap_datepicker,3901,29
 bootstrap_datepicker_tag,1159,20
+bootstrap_datetimepicker,177,12
 bootstrap_datetimepicker_railsx,444,9
 bootstrap_devise_base,1604,9
 bootstrap_farsi,220,8
@@ -10007,7 +10181,9 @@ bootswatch-theme-rails,3571,107
 bootswatch_rails,17255,649
 bootswitch,8017,173
 bootsy,35851,343
+bootsy-mongoid,5135,48
 bootsy-rails3,555,7
+bootsy-simple_form,5031,45
 bootup,5289,45
 booty,3971,19
 booty-call,2149,9
@@ -10063,6 +10239,7 @@ bosh_cli,147880,1213
 bosh_cli_plugin_aws,50470,981
 bosh_cli_plugin_micro,81223,1035
 bosh_cli_plugin_redis,3039,39
+bosh_client,1240,10
 bosh_common,165083,1172
 bosh_cpi,105935,1121
 bosh_deployer,18011,125
@@ -10126,6 +10303,7 @@ botr,2107,35
 botscout,5626,43
 botstrap,7293,83
 botsy,5660,49
+bottesque,961,11
 bottle,1251,12
 bottle_rocket,832,13
 bottlerocket,6035,48
@@ -10216,6 +10394,7 @@ boxen-linux,2036,88
 boxen-module-maker,4234,59
 boxer,6965,36
 boxey,5186,60
+boxfs,3982,37
 boxgrinder-build,73821,532
 boxgrinder-core,59663,429
 boxgrinder-esx-delivery-plugin,2901,24
@@ -10280,6 +10459,7 @@ bracket_tree,1368,10
 brad,912,11
 brad-rails,108,10
 brad-toto,2025,14
+bradesco_import,3057,15
 bradgessler-app-slice,1394,62
 bradgessler-birdfeed,1128,47
 bradgessler-domain_slice,1383,58
@@ -10288,6 +10468,7 @@ bradgessler-owidget,1121,49
 bradley_fizzbuzz,1065,15
 bradleypriest-mollom,3187,23
 bradleypriest-on_the_spot,1648,13
+bradm,7227,218
 bradphelan-sinatras-hat,2684,13
 bradshaw,2315,33
 bragi-app,6722,60
@@ -10542,6 +10723,7 @@ brio,3462,37
 brir,2198,24
 brisk-bills,5489,48
 briskly,1568,49
+bristle,5647,47
 brita,6582,71
 brite,5226,38
 brite-api,2355,33
@@ -10569,12 +10751,14 @@ brochure,18361,121
 brock,332010,72
 brocket,612,25
 brocktail,3097,22
+broctron,3729,47
 brodock-config-file-loader,1931,11
 brodock-validates_as_email,4090,23
 brodock-work_queue,1548,12
 broham,28585,179
 broilerplate,560,14
 broken_record,2486,64
+broken_windows,1362,62
 brontes3d-amqp,3632,68
 brontes3d-memcache-client,297,11
 brontes3d-production_log_analyzer,3065,46
@@ -10582,6 +10766,7 @@ brontes3d-rubycas-server,6052,39
 brontes3d-xmpp4r,295,13
 bronto,15531,177
 bronto-gem,1120,37
+brook,602,12
 brookr-tootils,298,12
 broom,10346,87
 bropages,17126,165
@@ -10632,6 +10817,7 @@ browsernizer,33495,160
 browserstack,1283,12
 browserstack-cucumber,2145,46
 browserstack-screenshot,2203,12
+browserstack-tunnel,2428,33
 browserstack-webdriver,9058,42
 browshot,14820,148
 browsql,1064,12
@@ -10676,6 +10862,7 @@ bscofield-stammer,564,25
 bscott-ec2ssh,1575,12
 bsearch,18886,23
 bsearch-ruby,1225,12
+bsf_scrape,9060,167
 bsgem,574,11
 bshell,1640,13
 bsherman-compass,283,12
@@ -10703,6 +10890,7 @@ btakita-focused-test,832,35
 btakita-jelly,5901,39
 btakita-screw-unit-server,2349,24
 btakita-screw_unit,577,24
+btc,3574,34
 btc-sdk,1764,24
 btc_address_validator,132,13
 btc_price,330,13
@@ -10728,6 +10916,7 @@ btparse-ruby,1912,15
 btrack,315,12
 btrade,5339,117
 btree,2008,12
+btry,1421,40
 bts-cucumber,828,39
 bts-mbws,300,11
 bts-scrobbler2,579,21
@@ -10739,6 +10928,7 @@ buapi,1235,52
 bubble,1581,12
 bubble-wrap,64191,279
 bubble-wrap-http,8124,53
+bubblegum,165,14
 bubbler,436,14
 bubo,6973,49
 bubot,6231,133
@@ -10812,6 +11002,7 @@ bugherd-api,4650,38
 bugherd_client,2552,70
 bugloco,2547,96
 bugly,1402,11
+bugmenotnot,418,12
 bugs_bunny,13338,85
 bugs_on_hub,1305,15
 bugsnag,359439,1650
@@ -10836,11 +11027,13 @@ build_associated,6937,64
 build_box,1699,52
 build_info,3727,26
 build_log_parser,1585,49
+build_me_an_api,800,12
 build_number,959,47
 build_status_server,15939,160
 build_watcher,9420,61
 buildar,26339,428
 buildboard,5540,38
+buildbot,800,12
 buildbox,19239,340
 builddir,687,36
 buildem,7523,62
@@ -10932,6 +11125,8 @@ bullring,13401,130
 bullseye,6560,72
 bullshit,8468,50
 bully,2877,25
+bulstem,1877,25
+bulutfon,703,13
 bum,14628,120
 bumble,1613,13
 bumbler,24991,120
@@ -10956,6 +11151,7 @@ bundle-gem-install,1313,11
 bundle-info,2988,40
 bundle-locker,4821,60
 bundle-milkode,2264,18
+bundle-scraper,6091,47
 bundle-star,1897,36
 bundle2rpm,6029,48
 bundle_benchmark,789,13
@@ -10977,6 +11173,7 @@ bundler-bootstrap,4570,34
 bundler-bouncer,3068,23
 bundler-bower,1280,27
 bundler-fastupdate,5883,40
+bundler-first_commit,1009,25
 bundler-fu,431,11
 bundler-gem-hg,305,13
 bundler-gem_version_tasks,1312,31
@@ -11032,6 +11229,7 @@ buoyancy,1014,13
 buratino,7651,70
 burden,4061,48
 burden_web,4051,50
+bureau,6266,93
 bureaucrat,10186,76
 burek,5197,103
 burger_fixins,4633,35
@@ -11045,6 +11243,7 @@ burke-monkeysupport,1116,49
 burlap,1457,12
 burlesque,5841,96
 burn,2587,83
+burn_iso,2280,35
 burninator,7846,111
 burnout,1404,13
 burnspam,1494,12
@@ -11064,6 +11263,7 @@ bus_factor,540,25
 bus_tracker,3407,22
 bus_trip,28889,191
 busboy,1426,13
+buscalibre,11817,107
 buscando_el_viento,1555,11
 buscape,1743,12
 buscape_api,7502,85
@@ -11080,6 +11280,7 @@ business_calendar,4274,36
 business_days,5899,25
 business_hours,1439,38
 business_insight_api_client,158,13
+business_kirk,1688,24
 business_process,466,10
 business_rules,3938,25
 business_seconds,2000,13
@@ -11111,6 +11312,7 @@ bust_rails_etags,9926,54
 busted,3564,81
 buster,4219,36
 bustle,10740,110
+busybody,1596,12
 butcher,6871,72
 butler,9644,61
 butler_static,10371,82
@@ -11132,6 +11334,7 @@ buttons,2143,11
 buttons-rails,2370,36
 butzopower-cups,569,26
 buweb_api_client,830,23
+buweb_content_models,25847,995
 buxfer,5945,40
 buzz,4845,63
 buzz-rails,1339,10
@@ -11179,6 +11382,7 @@ bystander,216,12
 bysykkel,3746,21
 bytes_converter,23860,95
 bytetool,2805,24
+byticus,2790,26
 byul,1991,13
 bz2,2647,11
 bzhipchat,1430,21
@@ -11223,6 +11427,7 @@ ca_ching,2389,24
 ca_virtex,278,3
 cabalist,5512,45
 cabbage,7381,58
+cabcf,1627,51
 cabi,6194,124
 cabin,555535,960
 cabin-web,2779,25
@@ -11293,6 +11498,7 @@ cache_replace,3796,58
 cache_rocket,1963,36
 cache_service,842,58
 cache_stats,600,14
+cache_the_ripper,1104,11
 cache_trasher,2424,12
 cache_tree,5122,60
 cache_value,3915,25
@@ -11547,6 +11753,7 @@ camayoc,4169,32
 cambelt,4527,44
 cambio,1272,17
 cambium,1868,103
+cambric,7438,59
 cambridge,1323,16
 camcapture,4846,48
 camcorder,14205,47
@@ -11635,6 +11842,7 @@ can_self_do_it,1147,33
 can_write,1981,13
 canable,30076,59
 canada,2012,51
+canada_eh,290,15
 canada_post,3994,44
 canadaduane-rubydoctest,284,15
 canadapost,1077,30
@@ -11647,8 +11855,10 @@ cancan,4513163,2184
 cancan-2,371,0
 cancan-permits,43633,357
 cancan-rest-links,20892,171
+cancan-roles,642,86
 cancan-sugar,2141,44
 cancan-unit-test,6377,121
+cancan_config,3975,60
 cancan_edit,1529,17
 cancan_namespace,5942,46
 cancan_strong_parameters,20915,214
@@ -11661,6 +11871,7 @@ cancer,958,0
 cancun,3693,134
 candelabra,12872,117
 candies,2968,35
+candit,135,15
 candle,5122,94
 candle_data,1855,22
 candlepin-api,766,15
@@ -11677,6 +11888,7 @@ canery,4355,60
 canhas,5566,44
 canis,1355,64
 canistreamit,1004,27
+caniuse,738,16
 canivete,5627,48
 canjs-rails,3117,45
 canmoia,4543,106
@@ -11695,6 +11907,7 @@ canonical-emails,26422,32
 canonical-rails,155001,343
 canonical-url,5735,14
 canonical_dude,2462,29
+canonical_url,2599,14
 canonical_url-rails,2966,63
 canonicalifier,910,18
 canonicurl,10306,101
@@ -11746,6 +11959,7 @@ cap-recipes,46674,82
 cap-rightscale,77460,137
 cap-runit,1309,7
 cap-scm-upload,521,2
+cap-site,7711,9
 cap-ssh,3449,7
 cap-ssh-key-man,9537,21
 cap-strap,16519,41
@@ -11864,6 +12078,7 @@ capistrano-calendar,13767,80
 capistrano-campfire,54861,80
 capistrano-campout,9201,97
 capistrano-changelog,505,32
+capistrano-chatwork,2425,76
 capistrano-chef,43056,164
 capistrano-chef-solo,2902,32
 capistrano-chocopoche,2457,48
@@ -11997,6 +12212,7 @@ capistrano-gvm,2154,75
 capistrano-haller,835,16
 capistrano-haproxy,2099,29
 capistrano-helpers,66376,408
+capistrano-hex,1456,14
 capistrano-hipchat,302,16
 capistrano-hivequeen,61299,720
 capistrano-holepicker,4969,14
@@ -12062,6 +12278,7 @@ capistrano-new-relic,3638,91
 capistrano-newrelic,19919,145
 capistrano-nexus,1187,13
 capistrano-nginx,7973,51
+capistrano-nginx-puma,513,16
 capistrano-nginx-unicorn,11427,140
 capistrano-node,4953,72
 capistrano-node-deploy,28839,387
@@ -12155,6 +12372,7 @@ capistrano-scm-bamboo,18739,72
 capistrano-scm-copy,3769,29
 capistrano-scm-git-export,560,5
 capistrano-scm-gitcopy,1833,17
+capistrano-scm-gitsubmodules,847,3
 capistrano-scm-jenkins,14191,54
 capistrano-scm-local,6048,55
 capistrano-scm-strategy,817,6
@@ -12256,6 +12474,7 @@ capistrano-v3-newrelic,1897,8
 capistrano-vexxhost,5670,6
 capistrano-virtualenv,6411,10
 capistrano-vmf,844,3
+capistrano-voupe,315,5
 capistrano-vps,663,1
 capistrano-webhook,1390,2
 capistrano-webserver,5564,7
@@ -12354,6 +12573,7 @@ capper,87482,190
 cappie,2090,11
 cappress,5256,9
 cappruby,7548,11
+cappuccino,196,0
 cappuccino-rails,434,7
 cappy-monit,2039,3
 cappy-taffy,1785,3
@@ -12393,6 +12613,7 @@ captchator,3266,7
 captchatrader,4966,3
 captched_to_death,2922,11
 captify,11673,27
+captio,2432,11
 caption,518,3
 caption_paperclip_processor,2311,8
 captivate,1981,3
@@ -12407,6 +12628,7 @@ capture_camera,2388,7
 capture_image,3104,16
 capture_io,3011,6
 capture_output_streams,158,3
+capture_screen,118,2
 capture_std,554,2
 capture_stdout,2324,3
 captureapi,1142,4
@@ -12443,6 +12665,7 @@ capybara-firebug,207993,493
 capybara-grope,3067,7
 capybara-harness,15225,46
 capybara-ios-emulation-driver,1737,14
+capybara-iphone,4050,7
 capybara-jasmine,5656,13
 capybara-java_script_lint,1191,3
 capybara-js_finders,11413,24
@@ -12603,6 +12826,7 @@ carray,535,0
 carrier,9118,20
 carrier-pigeon,67441,39
 carrier-services,799,3
+carrier2csv,213,3
 carrier_info,4016,12
 carriercouch,1682,4
 carrierlookup,862,3
@@ -12657,6 +12881,7 @@ carrierwave-serializable,7150,15
 carrierwave-size-validator,2497,9
 carrierwave-swift-swauth,1848,8
 carrierwave-taglib,1440,6
+carrierwave-tfs,7317,21
 carrierwave-truevault,243,2
 carrierwave-tt,818,3
 carrierwave-unique-filename,418,3
@@ -12674,6 +12899,7 @@ carrierwave-yandexfotki,1620,3
 carrierwave_accessors,203,6
 carrierwave_backgrounder,142974,186
 carrierwave_backgrounder_sequel,480,2
+carrierwave_couch_potato,212,4
 carrierwave_direct,92830,135
 carrierwave_direct_jquery,1227,2
 carrierwave_direct_mongoid,2642,8
@@ -12735,6 +12961,17 @@ cas_client,10490,20
 cas_my_string_extend,2702,7
 cas_rest_client,21761,35
 cas_ticket_check_padrino,557,3
+casa,903,0
+casa-admin-outlet,684,6
+casa-attribute,431,2
+casa-attributes-common,1084,7
+casa-engine,726,7
+casa-environment,389,4
+casa-operation,409,3
+casa-payload,411,3
+casa-publisher,411,2
+casa-receiver,413,2
+casa-support,415,3
 casablanca,13847,23
 casademora-flickr,280,3
 casbah,252,0
@@ -12757,6 +12994,7 @@ case,22212,29
 case_class,1895,2
 case_form,1845,2
 case_insensitive_arel,8870,19
+case_parser,2967,23
 case_scraper,3728,20
 caseadilla,2177,31
 caseblocks_api,16592,55
@@ -12868,6 +13106,11 @@ castle.dynamicproxy2,6308,7
 castle.windsor,7344,11
 casto,414,4
 castor,2463,11
+castoro-client,1592,2
+castoro-common,1648,2
+castoro-gateway,1577,2
+castoro-manipulator,1574,3
+castoro-peer,1573,3
 casttv-rakeutil,1097,11
 casty,1796,4
 casual,7243,15
@@ -13028,6 +13271,7 @@ cc_menu,918,3
 ccalc,1082,2
 ccavenue,926,9
 ccbuilder,12384,23
+ccconv,1120,2
 ccdk,1792,3
 ccfulfillment,1349,3
 ccheck,1401,3
@@ -13039,6 +13283,7 @@ ccls-simply_authorized,1883,3
 ccls-surveyor,1594,3
 ccls-use_db,1583,2
 ccollins-princely,2062,3
+cconv,1138,3
 ccp,27759,86
 ccs-provider,626,4
 ccs_core_gem,10049,18
@@ -13051,6 +13296,7 @@ ccup,1039,4
 cdamian-admin,550,5
 cdamian-feedlib,556,5
 cdamian-geoip_city,3651,2
+cdata,1285,3
 cdb,2353,4
 cdb-MongrelClusterRollingRestart,291,2
 cdb-crawlr,7838,28
@@ -13113,7 +13359,9 @@ celes,737,3
 celes-web,551,4
 cell_cycle,622,8
 cell_set,11367,27
+cellact,3280,11
 cellar,4904,34
+cellarpress,688,4
 celldee-bunny,6178,69
 cellect,2494,28
 cellect-client,4690,104
@@ -13141,6 +13389,7 @@ celluloid-io-serialport,716,3
 celluloid-pmap,1460,3
 celluloid-presence,1735,5
 celluloid-promise,3323,14
+celluloid-rate_limit,860,4
 celluloid-redis,13648,36
 celluloid-websocket-client,1064,2
 celluloid-zmq,31147,40
@@ -13149,6 +13398,7 @@ celsius,1380,7
 celsius-core,1074,4
 celt-ruby,2210,5
 cemeng-paperclip,1467,3
+cement,7002,9
 ceml,48285,97
 censorstrike,2790,5
 census,21855,37
@@ -13156,6 +13406,7 @@ census_api,6379,30
 census_data,4516,16
 census_shapes,1691,7
 centaur,3289,7
+center_html_elements,4284,11
 center_image_tag,10471,51
 centering_helper,223,3
 centipede,3812,7
@@ -13172,6 +13423,7 @@ centroid,1680,8
 centrum_faktur,8618,24
 centurion,3960,50
 centurion-framework,397,3
+centzy_common,29389,150
 cenum,1528,3
 cep,3258,19
 cep_facil,14024,37
@@ -13182,6 +13434,7 @@ cepmon-nagios,4780,13
 cequel,39879,132
 cequel-devise,611,5
 cequel-migrations-rails,6662,22
+ceramic,3086,10
 cerbero,2340,6
 cerberus,60236,91
 cerberus-annotations,486,5
@@ -13256,6 +13509,7 @@ cf_deployer,1519,17
 cf_factory,3222,11
 cf_heroku_migrator,1282,12
 cf_invalidation,172,4
+cf_oo,2340,5
 cf_ruby_gems,4832,8
 cfaker,3892,10
 cfbackup,5888,9
@@ -13291,11 +13545,13 @@ cgialt,5861,8
 cgiup,2102,3
 cgminer-api,2692,15
 cgminer_api_client,6320,72
+cgminer_monitor,10456,120
 cgore-bitstamp,458,3
 cgraph,4036,11
 cgriego-blender,288,2
 ch,88,3
 ch_id,1164,3
+cha,1972,13
 cha_work,176,2
 chadet,817,10
 chagol,4720,12
@@ -13303,8 +13559,10 @@ chai-backbone-rails,12505,36
 chai-jquery-rails,21741,25
 chai-rails,1586,12
 chain,2319,12
+chain-bitcoin-ruby,1187,6
 chain-boy,1492,4
 chain-reactor,2746,9
+chain-ruby,7771,66
 chainable,19982,33
 chaindotcom,346,2
 chaindrive,656,2
@@ -13321,9 +13579,16 @@ chairnerd,3103,20
 chairs,11065,36
 chake,2924,27
 chalk,802,3
+chalk-cli,1240,-14
 chalk-config,5984,4
+chalk-consul,2017,-22
+chalk-hostname,1736,-19
+chalk-interface,4620,-53
 chalk-log,10601,4
 chalk-rake,2563,3
+chalk-service,5050,-59
+chalk-thrift,9070,-105
+chalk-tools,13715,2
 chalk_dust,1719,4
 chalkers-Revver4R,285,3
 chalkers-rubyhelpers,278,2
@@ -13337,6 +13602,7 @@ chamber,12333,72
 chameleon,27990,29
 chameleon-sass,1771,22
 champagne,1464,3
+champierre_mega_lotto,845,13
 champion,691,2
 champions,598,2
 champu,2293,4
@@ -13465,6 +13731,7 @@ chateau,854,3
 chatr,2988,8
 chatroid,13022,40
 chatroom,2289,12
+chatspire,1518,2
 chatspry,457,2
 chatter,3361,8
 chatterbot,27171,75
@@ -13523,6 +13790,7 @@ check_js,3227,7
 check_late,4085,12
 check_out,1423,3
 check_passenger,474,6
+check_resque,2697,6
 check_resque_paranoid,4269,14
 check_slony,15419,30
 check_tag,8588,24
@@ -13606,6 +13874,7 @@ chef-handler-copperegg,2892,8
 chef-handler-datadog,276118,179
 chef-handler-deleter,734,3
 chef-handler-elapsed-time,11520,16
+chef-handler-flowdock,13940,47
 chef-handler-fluentd,1029,6
 chef-handler-graphite,160869,377
 chef-handler-growl,1573,4
@@ -13618,6 +13887,7 @@ chef-handler-mail-extended,4609,12
 chef-handler-motd,16828,35
 chef-handler-opsmatic,6734,63
 chef-handler-profiler,17877,14
+chef-handler-profiler-info,255,3
 chef-handler-reset-resolvconf,2445,13
 chef-handler-run-data,10957,11
 chef-handler-s3,3010,8
@@ -13736,6 +14006,7 @@ chemicals,2329,4
 chemistry,4353,11
 chemistry-element,1204,2
 chemistry-temperature,2299,5
+chemistry_paradise,3040,31
 chemistry_rails,1382,13
 chemistrykit,19065,83
 chemruby,3904,7
@@ -13783,6 +14054,7 @@ chickenbox,1540,4
 chico,1512,3
 chida_fib,1369,3
 chiebukuro,598,3
+chigusa,2888,6
 chikamichi-marshalize,282,2
 chiketto,6567,71
 chikkenbukket,2063,3
@@ -13901,6 +14173,7 @@ chomchom,7039,17
 chomp,342,2
 chomsky,1572,7
 choo_choo,432,3
+choose-color,676,8
 choose_class,742,4
 chooser,1231,9
 choosy,43687,67
@@ -13915,9 +14188,11 @@ chordy,2874,8
 chore,5862,17
 chore-core,218,4
 choreograph,96,3
+chores,1481,3
 chorn-dialable,273,3
 chorn-warden-googleapps,3653,6
 chorus,1725,4
+chosen,183,38
 chosen-add,1796,3
 chosen-awesome-rails,240,2
 chosen-koenpunt-rails,2641,14
@@ -13931,6 +14206,7 @@ chosen_rails,4503,4
 chosen_template,2058,9
 chowder,14178,24
 chozo,417142,171
+chrest,1390,3
 chris_lib,455,5
 chrisa-ruby-dtrace,2149,24
 chrisb-pony,1773,3
@@ -14001,6 +14277,7 @@ chromembed_rails,8431,21
 chromium,2009,2
 chronatog-client,2793,7
 chronic,5297905,4001
+chronic-bang,1138,6
 chronic-l10n,868,0
 chronic-mmlac,1964,7
 chronic-rails,2544,7
@@ -14215,6 +14492,7 @@ cinch-twitterwatch,674,4
 cinch-urbandict,4841,22
 cinch-urbandictionary,4743,12
 cinch-url-scraper,3979,22
+cinch-weather,1510,3
 cinch-weatherman,3321,19
 cinch-wikipedia,2934,15
 cinch-wit,1145,6
@@ -14252,6 +14530,7 @@ circle-cli,525,3
 circle_speech_balloon,24334,121
 circleci,6831,34
 circleci_notify,211,3
+circlefish,990,6
 circonus,17571,128
 circonus-api,1058,3
 circonus-munin,1904,3
@@ -14413,6 +14692,7 @@ class_attr,6406,11
 class_cacher,1472,7
 class_config,1114,5
 class_dependencies,28419,46
+class_docu_shower,1607,18
 class_factory,1907,2
 class_inheritable,2351,5
 class_inheritable_attributes,61434,6
@@ -14532,6 +14812,7 @@ clearbit,1978,50
 clearbit-leadscore,643,20
 clearcap,1451,14
 clearcase_helper,1528,12
+cleardb_client,241,6
 clearhead,232,6
 clearlynuts-woulda,549,12
 clearsale,7214,41
@@ -14543,12 +14824,14 @@ cleditor_rails,5295,19
 clementine,3760,19
 clenver,8435,90
 clerk,15322,42
+clerkapp,767,12
 clever-ruby,9367,128
 clever_duration,3869,12
 clever_elements,5451,23
 clever_reach,741,8
 clever_title,1278,13
 cleverbot,6760,27
+cleverbot-api,3365,27
 cleversafe,3281,27
 cleverua-best_thumbnail,1784,5
 cleverua-client_timezone_detection,2161,5
@@ -14585,6 +14868,7 @@ clickatell,92571,82
 clickatell-ruby19,2035,5
 clickclient,3726,14
 clickclient_scrap,10830,40
+clickity,2400,26
 clickjackable,831,11
 clickmap,520,7
 clickonchris-facebooker2,692,0
@@ -14635,6 +14919,7 @@ climer,2178,17
 climine,3982,65
 clindex,3813,19
 cline,22803,109
+cliner,2969,29
 cling,140,0
 clingfilm,911,13
 clinical,16485,52
@@ -14685,13 +14970,16 @@ clock,40965,66
 clockblock,7056,37
 clockout,8128,77
 clockpunch,5585,46
+clockwise,653,18
 clockwork,576609,909
 clockwork-multiple-nodes,661,7
+clockwork_mango,10145,39
 clockworkcomicpdf,443,7
 clockworkd,2739,13
 clockworksms,3792,20
 clog,17365,26
 clogger,54415,147
+clogger_ext,12844,40
 clojr,659,6
 clojure,2065,5
 clojure_jar,385,7
@@ -14720,6 +15008,7 @@ closure-compiler,761918,366
 closure-compilr,3700,14
 closure-sprockets,1934,8
 closure-templates,1450,6
+closure_api,2177,15
 closure_tree,125624,501
 closx,2879,22
 closync,6362,41
@@ -14736,6 +15025,7 @@ cloud-queues,2802,29
 cloud-toaster,1586,26
 cloud-utils,5372,21
 cloud66,29049,141
+cloud66-backup,2310,6
 cloud66-bluepill,21144,30
 cloud66_agent,35322,133
 cloud_assets,16733,89
@@ -14758,6 +15048,7 @@ cloud_financial_officer,3420,17
 cloud_five_push,1162,27
 cloud_flow,883,20
 cloud_formation,1542,22
+cloud_formation_template,947,7
 cloud_former,6422,171
 cloud_front,2905,12
 cloud_front_helpers,671,6
@@ -14768,6 +15059,7 @@ cloud_ruby,760,4
 cloud_runner,1630,11
 cloud_search,20656,119
 cloud_search_rails,2495,11
+cloud_service,1772,7
 cloud_shaped,4654,37
 cloud_snapshooter,507,31
 cloud_spokes_api_model,2709,19
@@ -14804,11 +15096,13 @@ clouder,7214,22
 cloudfactory,68736,322
 cloudfiles,320461,150
 cloudfiles-container-sync,1055,6
+cloudfiles-push,1902,5
 cloudfiles-sagamore,1257,6
 cloudfiles-sonian,1548,6
 cloudfiles_cli,5051,50
 cloudflare,24036,178
 cloudflare-dns-update,1925,31
+cloudflare_simple,678,11
 cloudflock,8136,84
 cloudflock-qt,276,6
 cloudformation-ruby-dsl,6474,50
@@ -15021,6 +15315,7 @@ cnb,5040,53
 cnb_rates,2034,23
 cncflora_commons,7309,194
 cnname,1037,6
+cnpaas_cli,1206,32
 cnpj_utils,893,11
 cnpj_validator,17689,18
 cnuconfig,1890,7
@@ -15034,6 +15329,7 @@ coa-op-scraper,906,7
 coach4rb,326,18
 coadjutor,1652,26
 coal,136,4
+coal-mine-canary,2047,11
 coalesce,1211,5
 coalescing_panda,15709,300
 coalmine,10250,23
@@ -15111,12 +15407,14 @@ cocoapods-trunk,465732,1096
 cocoapods-try,517853,1030
 cocoapods-try-release-fix,152609,15
 cocoapods-watch,485,8
+cocoaslides,626,20
 coconut,3759,25
 cocoon,370535,571
 cocoon_limiter,2055,12
 cocoslicer,871,7
 cocot,1247,13
 cocproxy,317,6
+cocu,5564,26
 cocupu,2042,11
 cod,14374,61
 coda,4053,12
@@ -15222,6 +15520,7 @@ codenjoy_connection,157,6
 codeodor-with,531,12
 codepath,4308,18
 codependency,10499,65
+codeplane,9752,41
 codeprimate-cancan,1483,6
 codeprimate-codeprimate-wizard_controller,278,6
 codeprimate-wizard_controller,269,5
@@ -15235,6 +15534,8 @@ coderbits,3908,25
 coderetreat,288,6
 coderifous-address_extractor,1312,29
 coderifous-tornado,275,6
+coderjoe-sc2ranks,6662,23
+coderrr-bluepill,1526,6
 coderrr-haxxx,5152,121
 coderrr-memcache_queue,266,7
 coderrr-mixico,540,11
@@ -15249,7 +15550,9 @@ coderunner,64304,641
 coderwall,2082,12
 coderwall-api,1310,8
 coderwall-ruby-api,4557,22
+coderwall_api,1213,6
 coderwall_ruby,918,5
+coderwaller,3650,17
 codesake,1976,15
 codesake-commons,12152,79
 codesake-dawn,15804,141
@@ -15412,6 +15715,7 @@ collapsed_routes,1991,7
 collapstring,4785,29
 collavoce,9877,35
 collect-agent,8818,85
+collect_first_word_of_case_menu,1613,17
 collect_plus,284,5
 collecta,1938,7
 collecta-rb,1968,5
@@ -15421,6 +15725,7 @@ collectd,28564,36
 collectd-dsl,2066,10
 collectd-formatter,1004,6
 collectd-interface,8950,38
+collectd-ipmitool,4224,16
 collectd-plot,1342,8
 collectd-rest-server,1513,5
 collectd2graphite,1117,6
@@ -15435,9 +15740,11 @@ collection_json,2661,13
 collection_json_serializer,208,8
 collection_of,3603,41
 collection_sorter,1978,26
+collections,24051,28
 collective,2754,10
 collective-data,10777,29
 collective-metrics,7927,80
+collective_vibration,863,10
 collectiveidea-awesome_nested_set,1556,30
 collectiveidea-delayed_job,808,14
 collectiveidea-deploy_and_deliver,271,8
@@ -15467,6 +15774,7 @@ colombo,2901,24
 colombus,1785,4
 colonel,980,6
 colonize,908,13
+colony,90825,738
 color,599364,309
 color-console,669,13
 color-converter,1478,11
@@ -15518,10 +15826,12 @@ colorbox-rails,46731,130
 colorbug,362,12
 colorconfig,2032,31
 colored,2678904,2795
+colored-cutest,514,5
 colored-not,1719,12
 colored_logger,2280,34
 colored_scripts,210,6
 colorer,16694,63
+colores,808,7
 colorful,10130,21
 colorful-logger,1942,6
 colorful_inspect,4287,18
@@ -15541,6 +15851,7 @@ colorlib,421,7
 colorlog,4202,24
 colormath,14629,25
 colorme,5414,20
+colormeshop,625,5
 colorpicker,2769,11
 colorputs,2399,24
 colors,7309,26
@@ -15558,6 +15869,7 @@ colour,10553,35
 colourer,640,7
 colouringcode-passenger,3700,13
 colourlovers,1416,6
+colours,7999,99
 colread,2165,20
 cols,724,8
 colszowka-cucumber_table_formatter,1311,27
@@ -15579,6 +15891,7 @@ columnizer,5932,26
 columns,1259,24
 columns-matcher,5225,20
 columns-roles,542,5
+columns_for,1979,5
 columns_matcher,9029,57
 columns_on_demand,7316,50
 colver,5082,17
@@ -15700,6 +16013,7 @@ commerce_units,257,5
 commission_junction,28600,90
 commission_junction_stats,1780,9
 commissioner,793,0
+commit,1303,11
 commit-comment-tools,844,6
 commit-meat,2729,30
 commit-msg-url-shortener,2352,13
@@ -15715,6 +16029,7 @@ commitphotos,1956,22
 commitshots,7697,56
 committed_changes,1569,5
 committee,25579,249
+commitweet,2630,17
 commity,207,6
 commode,2160,12
 commodore_cox,1924,8
@@ -15907,6 +16222,7 @@ compass-unsemantic,3489,30
 compass-validator,55200,42
 compass-vgrid-plugin,11397,41
 compass-vikingR-template,972,6
+compass-vikingR-template-sass,105,8
 compass-warning,661,5
 compass-webfontspecimen-plugin,1995,5
 compass-wordpress,14448,44
@@ -15921,6 +16237,7 @@ compass_extension,14966,78
 compass_formalize,7446,32
 compass_icon_fonts,3639,32
 compass_radix,29478,273
+compass_radix_3,596,7
 compass_rose,1895,23
 compass_sumo,6406,66
 compass_twitter_bootstrap,84036,109
@@ -15992,8 +16309,10 @@ computation,13298,43
 compute,1043,6
 computer_please_do_you_happen_to_know_the_time_please_thank_you_meow,241,7
 computering,2433,26
+computerunner,752,8
 computron,5340,18
 comrade,6020,22
+comrade_app,4107,109
 comradefy,6482,23
 comsat,9461,48
 comscore_ruby,5539,26
@@ -16039,6 +16358,10 @@ concise_logging,1941,21
 concisecss,1429,41
 concord,68188,302
 concord_cacher,32526,122
+concordance,733,5
+concordance-app,727,5
+concordance-demo,725,5
+concordance-example,730,6
 concordia-publishing-house-syck,844,7
 concordion,7298,27
 concrete,3642,13
@@ -16082,6 +16405,14 @@ condor-job,1029,13
 conduct,431,8
 conductor,38775,140
 conduit,6643,85
+conduit-atom,403,13
+conduit-braintree,1449,43
+conduit-fusion,1483,64
+conduit-rails,1962,33
+conduit-reactor,242,19
+conduit-sprint,121,8
+conduit-suretax,1064,40
+conduit-wave,1160,28
 conduit4r,1863,6
 cone,7042,36
 coneco,5480,18
@@ -16100,9 +16431,11 @@ confed_scraper,1392,6
 confer,534,4
 conference_manager-ruby,6391,21
 conferred,335,7
+confested,277,7
 confetti,103802,516
 confgit,3000,23
 confickle,105,0
+confide,1051,6
 confidence,5436,18
 confidence_weighted,553,6
 confident,861,6
@@ -16235,6 +16568,7 @@ conformista,651,7
 conformity,2218,59
 confparser,10244,36
 confpkgs,939,11
+confree_generator,534,4
 confrider,4509,29
 confstruct,36371,56
 confswap,380,32
@@ -16314,6 +16648,7 @@ consistent_hashing,6528,14
 consistent_hashr,3825,12
 consistent_schema_rb,3360,32
 consistent_schema_rb-apartment,1425,12
+consolation,1507,7
 console,15469,48
 console-cf-plugin,1503,6
 console-colors,1644,7
@@ -16398,6 +16733,7 @@ contact-list,3553,19
 contact_congress_parser,4334,122
 contact_csv,3777,13
 contact_form,3751,31
+contact_forms,10292,80
 contact_page,782,6
 contact_sport,2573,19
 contact_us,34611,148
@@ -16504,6 +16840,7 @@ continuum-stager-api,4394,94
 continuus_lenimentus,2202,24
 contour,83082,322
 contour-minimalist,6660,30
+contra,875,13
 contract,591,13
 contract_acceptance_framework,4388,17
 contracted,1510,5
@@ -16530,6 +16867,7 @@ control_group,3151,20
 control_tower,2328,7
 controlio,1401,40
 controll,3832,21
+controlled_quit,2167,11
 controlled_versioning,5289,76
 controller,630,6
 controller-usage,1429,7
@@ -16559,7 +16897,9 @@ conversion,3636,10
 conversions,10937,31
 conversocial,2155,63
 convert_font,488,5
+convert_global_env,2561,20
 convert_memory_engine,258,7
+convert_pdf_to_text,1103,12
 convert_theme,7268,25
 convert_to_bootstrap3,403,6
 convertable_values,7855,26
@@ -16586,6 +16926,7 @@ cookbook-client,3664,12
 cookbook-development,561,6
 cookbook-omnifetch,2890,15
 cookbook-reader,1181,17
+cookbooks,20881,318
 cookery,106,0
 cookie-proxy,1364,5
 cookie_alert,3031,23
@@ -16616,6 +16957,7 @@ cool_extensions,1943,5
 cool_faker,1516,10
 cooler,2870,19
 coolerator.vision,21667,76
+coolie,3093,27
 coolify,775,11
 coolify_gem,873,19
 coolline,244029,317
@@ -16663,6 +17005,7 @@ copy_machine,1801,5
 copy_my_conf,1737,11
 copy_no_dependency,552,7
 copy_paste_pdf,1246,9
+copy_rails_tutorial,434,14
 copy_tuner_client,11829,79
 copybar,1152,6
 copycasts,1439,16
@@ -16787,6 +17130,7 @@ corto,8397,38
 corundum,36778,267
 corus,1436,8
 corvette,796,19
+corx,11767,42
 cory-rubyflashbake,1059,24
 coryodaniel-merb_meta,261,6
 coryodaniel-merb_threshold,275,7
@@ -16843,6 +17187,7 @@ couch-warmer,8980,37
 couch_cloner,6185,25
 couch_crumbs,3652,11
 couch_docs,12904,47
+couch_foo,9667,30
 couch_i18n,16301,80
 couch_loafer,1905,6
 couch_photo,16541,42
@@ -16883,6 +17228,7 @@ couchdb,11682,39
 couchdb-client,4644,26
 couchdb-extras,206,12
 couchdb-replicator,946,22
+couchdb-ruby,9237,31
 couchdb-utils,1527,5
 couchdbSync,263,7
 couchdb_acts_as_list,3417,26
@@ -16916,6 +17262,7 @@ couchrest_model_slug,4030,18
 couchrest_model_thought,1594,0
 couchrest_session_store,12783,88
 couchsphinx,3711,11
+couchsurfing_client,434,5
 couchup,19508,85
 couchwatcher,2940,14
 cough-rails,378,7
@@ -16927,9 +17274,11 @@ coulis,5976,35
 count,3240,36
 count_by,1413,7
 count_estimate,103,7
+count_loc,1486,12
 count_min_sketch,204,5
 count_von_count,233,24
 countable-rails,639,6
+countdown,1870,8
 countdowner,7170,41
 countdownlatch,32074,4
 countdownobj,2836,19
@@ -17022,6 +17371,7 @@ cpanel,5427,28
 cpb-generators,2996,43
 cpe,14385,56
 cpee,21842,605
+cpf,5183,26
 cpf_cnpj,9012,35
 cpf_faker,15712,50
 cpf_generator,1620,16
@@ -17037,6 +17387,8 @@ cplus2ruby,8964,45
 cplusplus,3655,16
 cpowell-SyslogLogger,316,7
 cpp_engine,5174,39
+cpp_test,917,37
+cppthor,1480,10
 cpr,6054,34
 cpr_adressematch,1876,18
 cprobert-s3sync,2993,49
@@ -17173,10 +17525,14 @@ create-rails-dev-db,1964,8
 createDBTable,3907,97
 createDir,1099,30
 create_awesome_readme,567,35
+create_file_skeleton,1503,45
+create_iso,175,8
 create_rails_mysql_db,6507,41
+create_ruby_directory_layout,391,7
 create_table,3971,7
 create_user,939,49
 create_valid,8504,51
+create_zip,379,8
 created-and-updated-by,10736,57
 createproj,592,115
 createsend,201503,346
@@ -17214,6 +17570,7 @@ creepin,1013,7
 creepy,2360,9
 creepy-crawler,922,18
 cregexp,3232,22
+cremefraiche,3757,27
 cremul-parser,2518,60
 crender,2433,20
 creng,1901,19
@@ -17268,6 +17625,7 @@ croesus,864,54
 crohr-docapi,1019,36
 crohr-restfully,1033,36
 croipg,883,9
+croissant,720,25
 cromwell,10743,53
 cron-parser,626,8
 cron-spec,10097,29
@@ -17292,7 +17650,9 @@ crontabwrap,1807,10
 crontest,1921,9
 cronus,814,10
 crony,3353,34
+crop,99,8
 crop-duster,3118,78
+crop_calculator,3174,33
 cropimage_riffpad,3635,35
 cropped_paperclip,1130,8
 cropper,758,7
@@ -17334,6 +17694,7 @@ crowd_client,1909,9
 crowd_rails,2147,10
 crowd_rest,4003,25
 crowd_support,5092,46
+crowdbase,1985,17
 crowdblog,26956,231
 crowdflower,28913,177
 crowdflower-rtfm,2457,16
@@ -17399,6 +17760,12 @@ crushlovely-crushserver,1036,34
 crushlovely-max_mind,259,9
 crushlovely_table_helper,1083,9
 crushserver,20209,121
+crust,549,8
+crust-contacts,171,11
+crust-dashboard,175,8
+crust-login,342,19
+crust-platform,342,16
+crustulum,96,7
 crusty,690,7
 crutch-google_translate,528,16
 crux,1404,10
@@ -17484,6 +17851,7 @@ csexton-twitter_archive,1542,54
 csg,5048,90
 cshaml-sprockets,2758,28
 csi,2535,28
+csid,2638,107
 csigar,599,35
 cskit,710,11
 cskit-biblekjv,695,7
@@ -17504,6 +17872,8 @@ csquare-cast,1238,8
 csquares,1913,10
 csrf_token_caching,796,10
 css,7160,35
+css-annotate,9945,58
+css-annotated,1756,9
 css-bootstrap-rails,11223,64
 css-class-string,1824,49
 css-colour,1147,32
@@ -17639,6 +18009,7 @@ csv_magic,9021,70
 csv_mapper,1527,7
 csv_model,1283,45
 csv_monster,1975,25
+csv_mysql_importer,3056,54
 csv_parser,588,11
 csv_pirate,54339,307
 csv_pivot,259,9
@@ -17696,6 +18067,8 @@ ctl_base_ui,482,28
 ctm,2688,36
 ctoD,2283,33
 ctodo,5328,38
+ctotrte,508,21
+ctran-annotate,526,16
 ctreatma-activerecord-oracle_enhanced-adapter,2634,16
 ctreatma-rails_sql_views,2580,19
 ctt-background-jobs,1301,17
@@ -17754,6 +18127,7 @@ cucumber-jira,227,0
 cucumber-json,4160,16
 cucumber-json-api-steps,1131,26
 cucumber-jvm,26683,216
+cucumber-loggly,6107,57
 cucumber-mingle,1763,10
 cucumber-nagios,110466,279
 cucumber-nc,1849,22
@@ -17893,6 +18267,8 @@ culturecode-holidays,90,0
 culturecode-state_machine,105,13
 culturecode-sunspot_solr,334,0
 culturegrid,3348,14
+cumber,4322,99
+cumis,104,9
 cumquat,1337,10
 cumtd,5513,75
 cumuli,6598,94
@@ -17934,6 +18310,7 @@ curl_wrapper,3646,25
 curldown,4773,67
 curltube,3561,8
 curly,5057,9
+curly-lib,939,9
 curly-templates,16731,250
 curly_mustache,1843,10
 currencies,715322,761
@@ -18024,6 +18401,7 @@ custom_fields,61182,100
 custom_fragment_cache,5244,9
 custom_layout,5413,35
 custom_logs,2978,66
+custom_nagios,10851,86
 custom_password_generator,328,11
 custom_rails_themes,2103,17
 custom_report,703,14
@@ -18046,6 +18424,7 @@ customlogger,922,69
 customs,4542,35
 custos_notifier,13741,91
 cut,2907,40
+cut_audio,5656,18
 cut_to_files,268,9
 cutagem,10439,54
 cutaneous,7860,79
@@ -18066,6 +18445,8 @@ cuuid,7041,54
 cuukie,12992,90
 cv,9681,63
 cv-user-agent,6866,25
+cv4r,938,9
+cve_scraper,2764,46
 cvg,4070,71
 cvgen,318,18
 cvnotes,1506,29
@@ -18105,6 +18486,7 @@ cwyckoff-babel_icious,4648,161
 cwyckoff-carrot,269,9
 cwyckoff-hash_builder,520,17
 cwyckoff-rosetta_queue,1559,59
+cx_api,458,0
 cxml,759,9
 cxx,9026,76
 cxxproject,44772,416
@@ -18121,11 +18503,13 @@ cybele,12115,182
 cybercoach,1151,59
 cyberfox-gchart,799,21
 cyberfox-lighthouse-api,521,19
+cybermen,1361,9
 cyberplat_pki,6953,63
 cyberplus,1398,9
 cybersourcery,391,20
 cybersourcery_testing,409,17
 cybertip,652,9
+cyberweb,15267,402
 cyc-console,4938,31
 cycle2-rails,2036,17
 cycle_chef_handler,11571,28
@@ -18194,7 +18578,9 @@ d3c3-rails,264,10
 d3js-plugins-rails,9168,108
 d3js-rails,14857,108
 d3skills,1171,9
+d3status,1234,10
 d4-rails,1663,37
+d50b,20187,735
 d7-theme-scaffold,696,10
 d8a,1913,9
 da-has_token,2457,25
@@ -18238,6 +18624,7 @@ daemonize_rails,754,27
 daemonizer,79855,416
 daemonizr,1960,8
 daemons,15316238,6722
+daemons-mikehale,13005,34
 daemons-rails,62416,123
 daemontools,8506,112
 daemontor,3081,15
@@ -18288,6 +18675,7 @@ dakrone-trie,270,9
 dakwak,2206,26
 dakwak-api,903,8
 dalbaqui-sanitize_email,276,10
+dalek,1367,10
 dallas-acts-as-phone,754,27
 dallas-has_phone_number,526,17
 dalli,4427988,3497
@@ -18437,6 +18825,7 @@ darthapo-cumulus,260,8
 darthapo-stratus,790,27
 daru,1459,72
 darvin_functions,4645,26
+darwin,1519,10
 darwin-xrefresh-server,1265,45
 darwinjs-rails,2041,23
 darwinning,1762,29
@@ -18446,6 +18835,10 @@ dasch-bencode,270,9
 dasch-smurf,275,9
 dascitizen,1042,9
 dase,7513,91
+dash,6804,41
+dash-bees,24777,137
+dash-fu,4133,27
+dash-mario,5107,29
 dash_shell,435,9
 dashboard,2098,10
 dashboarder,3909,33
@@ -18502,6 +18895,7 @@ data_bank,1939,9
 data_bindings,2606,18
 data_broker,5230,85
 data_calendar,7307,39
+data_class,170,19
 data_cleaner,6228,37
 data_cleansing,8109,73
 data_container,1045,38
@@ -18572,9 +18966,11 @@ database_cleaner-remote_api,2912,39
 database_console,674,18
 database_exporter,6308,43
 database_fork,2220,70
+database_guard-rails,681,10
 database_introspection,3610,45
 database_loader,3655,17
 database_operations,3838,26
+database_params,628,11
 database_resetter,2812,18
 database_rewinder,41936,135
 database_rollbacker,282,18
@@ -18618,6 +19014,7 @@ datafile,513,36
 datafix,542,13
 dataflow,10768,50
 datagram,1515,15
+datagraph,2780,8
 datagrepper,1423,18
 datagrid,82849,474
 datahunter,1359,107
@@ -18832,10 +19229,12 @@ daybreak,23633,127
 daylife,1924,9
 daylight,603,9
 daylite-models,3752,15
+dayone_latex,1510,21
 dayrb,521,20
 days,7940,80
 days360,3148,18
 days_and_times,4084,15
+days_of_the_week,381,10
 days_picker,7467,74
 dayset,966,10
 dayvan,8821,43
@@ -18881,6 +19280,7 @@ db_mon,817,22
 db_nazi,9805,58
 db_notes_eng,2244,28
 db_notes_engine2,3028,38
+db_populate,9155,18
 db_query_helper,869,7
 db_reference,14664,83
 db_replicator,1136,55
@@ -18893,6 +19293,7 @@ db_structure_writer,465,9
 db_supplier,549,27
 db_sync,1984,20
 db_tasks,1494,7
+db_uri,1470,17
 db_version_manager,1342,7
 db_wrapper,474,9
 dbadmin,1323,18
@@ -19087,6 +19488,7 @@ ddollar-test-gem,3663,19
 ddollar-textmate,3036,107
 ddollar-twitter,1044,36
 ddp,281,18
+ddpi,14397,69
 ddplugin,1185,10
 ddr-alerts,457,34
 ddr-antivirus,1415,68
@@ -19231,6 +19633,7 @@ decisiv-sharded_database,3326,156
 decisiv-will_paginate,793,36
 deck,8146,72
 deck-of-cards,6735,84
+deckard,17899,136
 deckard_cain,1705,31
 deckchair,9032,108
 deckify,2688,38
@@ -19243,6 +19646,7 @@ declarative_authorization,419862,272
 declarative_authorization-dta,5028,36
 declarative_authorization_padrino,5219,38
 declarative_grid,3917,53
+declare,3884,39
 deco,626,11
 decoct,3586,25
 decodar,252,0
@@ -19250,6 +19654,7 @@ decode_www_form_component,3096,37
 decodeideas-decodeideas-right_aws,270,12
 decodeideas-right_aws,276,14
 decoder,25700,119
+decoder-ring,2297,21
 decommission,2646,25
 decor,1707,12
 decorate,1711,13
@@ -19294,6 +19699,7 @@ deep_freeze,1059,12
 deep_hash,4058,23
 deep_hash_transform,473,13
 deep_merge,430185,728
+deep_merger,533,22
 deep_struct,7651,71
 deep_test,26467,154
 deep_test_pre,2166,12
@@ -19319,6 +19725,7 @@ def_resource,821,10
 def_retry,1442,65
 deface,459411,606
 defacer,599,24
+default,909,50
 default-url-options-for-mailers,4888,38
 default_classes_for_form_inputs,2060,11
 default_controller,766,13
@@ -19343,6 +19750,7 @@ deferrable,6142,26
 deferrable_actions,1918,25
 deferrable_gratification,18199,56
 deferred,6891,22
+deferred-for-ruby,639,13
 deferred_associations,18343,112
 deferred_enum,2670,29
 deferred_exception,621,12
@@ -19559,6 +19967,7 @@ demo_game,107,16
 demo_gem,1278,14
 demo_lorem,551,27
 demo_nothing,232,13
+demoable,2042,34
 democracyworks-synapse,398,11
 demode,2198,40
 demogem1,505,13
@@ -19685,6 +20094,7 @@ deprecations,797,46
 deprecator,2572,57
 depression,6615,56
 deproll,1849,14
+deps,1877,16
 depsio,3167,52
 depth-charge,3587,30
 deputy,94127,779
@@ -19732,6 +20142,7 @@ descriptive-statistics,50466,365
 descriptive_statistics,34531,305
 desert,38039,179
 desi,17863,295
+design_wizard,261,12
 designate,3890,22
 designmodo-flatuipro-rails,7938,97
 designmodo-startup_framework-rails,3779,119
@@ -19756,6 +20167,7 @@ desperados,1701,11
 desponders,1840,26
 dest,431,14
 destination,1002,54
+destination_batch_processor,1394,87
 destiny,2712,89
 destroy_associates,433,13
 destroy_backgrounded,1371,14
@@ -19780,6 +20192,7 @@ detective,7271,54
 detektorfm,2328,51
 determinations_comparison,8561,178
 determine,1966,25
+determine_archive_type,486,13
 deterministic,7635,340
 detest,6654,54
 detfis-rails-parts,2491,25
@@ -19964,6 +20377,8 @@ devise_facebookable,782,0
 devise_g5_authenticatable,2911,62
 devise_google_authenticator,17788,261
 devise_groupable,1100,15
+devise_hack,1419,11
+devise_header_token,2531,13
 devise_ichain_authenticatable,4828,95
 devise_imap_authenticatable,11724,125
 devise_imapable,3571,24
@@ -20014,11 +20429,13 @@ devise_security_extension,97563,424
 devise_sequel,4709,42
 devise_session_expirable,2613,42
 devise_session_limit,175,13
+devise_shibboleth_authenticatable,2589,27
 devise_signin_loggable,408,14
 devise_simply_stored,3488,40
 devise_sms_activable,1496,12
 devise_sms_verifiable,1906,70
 devise_sociable,1749,24
+devise_social,954,15
 devise_ssl_session_verifiable,3508,80
 devise_strategy_google_apps_open_social,889,15
 devise_subscribable,518,15
@@ -20054,6 +20471,11 @@ devproxy,5071,109
 devrobber,328,29
 devrubygem-string_extend,266,12
 devry,3635,30
+devs,811,27
+devs-examples,811,30
+devs-ext,1159,38
+devs-models,811,26
+devs_ruby,421,13
 devserver,9137,83
 devstructure,44801,368
 devtools,1449,13
@@ -20084,6 +20506,7 @@ dextery,1288,13
 dextokenable,397,25
 dezi-client,2190,58
 dfa_client,878,12
+dfc,9161,93
 dfcapi,389,14
 dfect,12170,96
 dfeojm,3464,38
@@ -20120,6 +20543,7 @@ dhash,727,28
 dhashion,206,27
 dhcp,2082,43
 dhcp_it,442,14
+dhcpcd,269,14
 dhh2,519,16
 dhill-sprinkle,1419,13
 dhkeyexchange,1828,11
@@ -20165,6 +20589,7 @@ diametric,6972,137
 diamond,4596,81
 diamond-mechanize,5111,53
 diamond_invoice,1332,12
+diamond_shell,32017,160
 diamonds,320,0
 dian_ping,3966,108
 diana,6288,59
@@ -20195,6 +20620,7 @@ dicechucker,3421,25
 diceguru,128,16
 dicer,3400,56
 diceroller,2333,30
+diceware,784,38
 dicey,1645,15
 dichotomy,585,27
 dickburt,1388,13
@@ -20284,6 +20710,7 @@ difio-heroku-ruby,2489,28
 difio-openshift-ruby,1162,15
 digarc-giternal,1452,15
 digest,7798,26
+digest-bubblebabble,6945,14
 digest-crc,25715,81
 digest-ed2k,1259,13
 digest-email,1001,14
@@ -20319,6 +20746,7 @@ digital_opera,4356,120
 digital_trees_and_sets,945,13
 digitalfilmtree,4360,95
 digitalfilmtree-util,681,11
+digitalnz,1816,12
 digitalocean,11760,160
 digitalpardoe-rflickr,4159,107
 digitaria-handsoap,268,15
@@ -20337,6 +20765,7 @@ dilation,1177,16
 dilbert,516,25
 diligent,771,24
 dill,6623,138
+dillify,1076,40
 dillo,3381,43
 dilute,2736,54
 dim,13494,147
@@ -20372,6 +20801,7 @@ dinero_mail_checkout,1264,14
 dinero_mail_ipn,6868,77
 dineromail,13859,150
 dingo,1455,40
+dinheiro,89,14
 dink,2782,29
 dinner,393,15
 dino,7384,64
@@ -20950,6 +21380,7 @@ do-my-timecard,616,13
 do_derby,17539,200
 do_h2,17477,201
 do_hsqldb,17505,198
+do_it,5735,69
 do_jdbc,46401,221
 do_mysql,555110,1240
 do_not_want,1679,14
@@ -20985,6 +21416,7 @@ doc_repo,219,12
 doc_ripper,429,28
 doc_smoosher,887,28
 doc_storage,6741,57
+doc_template,1422,15
 doc_to_dash,9598,123
 doc_to_pdf,2600,53
 doc_wrapper,6830,67
@@ -21126,8 +21558,10 @@ docx-cloner,2704,69
 docx-html,2055,11
 docx-templater,1829,28
 docx2txt,500,12
+docx_builder,2646,59
 docx_converter,526,14
 docx_generator,2758,53
+docx_mailmerge,384,31
 docx_manipulator,9247,106
 docx_replace,3887,56
 docx_template,1382,96
@@ -21140,6 +21574,7 @@ dodecaphony,562,31
 dodo,5289,39
 does_it_really_work354,416,13
 doesfacebook,16758,173
+doesfollow,5704,56
 doeskeyvalue,10892,124
 doesopengraph,5456,52
 doesprettyurls,1443,17
@@ -21186,6 +21621,7 @@ doit,321,27
 doitian-tmuxinator,1418,12
 dojan,1018,12
 dojefiy,745,29
+dojo,1998,27
 dojo-pkg,14185,111
 dojo-rails,12583,166
 dojo_generator,6911,55
@@ -21281,6 +21717,7 @@ domr,26433,369
 domreactor-redglass,4010,92
 domtempl,471,30
 don,1972,27
+don_draper,2424,96
 donald,14900,124
 done,1205,16
 done21-validifier,763,36
@@ -21344,6 +21781,7 @@ dosire-god,802,39
 dossier,17868,361
 dossier-segmenter,2822,57
 dostuff,1116,14
+dot,1618,19
 dot-properties,3480,60
 dot11,1876,10
 dot_configure,323,14
@@ -21356,6 +21794,8 @@ dot_rake_tasks_in_rails,1035,16
 dot_why,5818,172
 dota,1435,164
 dota2,405,16
+dota2_arena_courier,411,43
+dota2_arena_warchief,136,18
 dotanuki,11479,137
 dotanuki-ruby,2560,29
 dotbackup,1069,15
@@ -21375,10 +21815,12 @@ dotenv-rails,678952,1369
 dotenv-schema,592,15
 dotenv-schema-rails,606,14
 doterd,250,15
+dotfile,12128,175
 dotfile_linker,4768,79
 dotfiles,11525,107
 dotfiles-installer,1397,12
 dotfu,2105,43
+dotgems,1350,17
 dotgpg,2202,93
 dotide,779,28
 dotify,19290,271
@@ -21412,6 +21854,7 @@ dotted_hash,1965,46
 dottedhash,472,15
 dotter,3495,27
 dottie,517,15
+dottify,1770,46
 dottor,4178,62
 dotty,4386,43
 dotum,661,13
@@ -21492,6 +21935,7 @@ downspout,14514,186
 downthemall,1719,16
 downthetube,15178,184
 downvoteupvote,374,16
+dox-api,790,43
 doxo-paperclip,280,18
 doxo-roxml,260,13
 doxyparser,2118,66
@@ -21557,6 +22001,7 @@ drafter,13614,212
 drafts,5715,88
 draftsman,2080,87
 draggabilly-rails,234,35
+draggggable,4100,59
 dragon,1875,45
 dragon_pay,1439,43
 dragon_translator,223,13
@@ -21586,6 +22031,7 @@ dragons_dream,790,14
 dragons_keep,1728,16
 dragoon,12089,149
 dragoon_system,7981,95
+dragulator,274,14
 drailties,3395,85
 draiodoir,1600,14
 drake,48881,459
@@ -21949,6 +22395,7 @@ duck_puncher,1988,106
 duck_punching,687,17
 duck_test,4263,62
 ducker,330,14
+duckinator-fakefs,1084,12
 ducklink,2726,34
 duckpond,2531,133
 duckpuppy-string_extend,270,18
@@ -21971,6 +22418,7 @@ dude_weak,1109,12
 dudemeister-uuid4r,4255,29
 dudley,439,14
 due_credit,2797,62
+duedil,1689,29
 duelinmarkers-renum,767,45
 duet-bootstrap,2025,45
 duffel,626,30
@@ -22029,6 +22477,7 @@ dumpster,4506,58
 dumptruck,1531,62
 dumpy,1084,74
 dun,3113,92
+duncan,293,13
 dunder,6036,62
 dunedain289-aasm,779,42
 dunedain289-god,264,14
@@ -22117,6 +22566,7 @@ dvdplm-aasm,271,18
 dvdplm-ar_mailer,2248,138
 dvdplm-taskr,525,28
 dvi,1815,15
+dvi_scrape,10943,302
 dvl-core,1310,151
 dvl-flashes,839,64
 dvla,2111,41
@@ -22156,6 +22606,7 @@ dxruby_rp5,1794,58
 dxruby_sdl,5791,163
 dyci,5595,94
 dyci-compiler,4011,61
+dydra,14457,163
 dydx,9061,345
 dye,11728,76
 dygraphs-rails,3247,29
@@ -22265,6 +22716,7 @@ dynect-utils,2371,29
 dynect4r,13914,87
 dynect_email,1673,33
 dynect_rest,76076,130
+dynect_rest-mikehale,1822,15
 dynectastic,6161,60
 dynflow,42612,264
 dyninc,1542,13
@@ -22280,6 +22732,7 @@ dynopoker,4490,105
 dynport-capistrano_rsync_with_remote_cache,2368,17
 dynport_tools,33559,389
 dynsass,975,32
+dynsimple,1994,62
 dyntool,23859,673
 dyoder-auto_code,268,13
 dyoder-autocode,2276,139
@@ -22331,6 +22784,7 @@ each,2709,29
 each-with-logging,2764,28
 each_batched,4193,61
 each_line_reverse,785,14
+each_section,2026,15
 each_sql,12978,166
 each_with_context,2191,13
 each_with_progress,5496,43
@@ -22503,6 +22957,7 @@ easy_placeholder_image,102,15
 easy_post,812,15
 easy_presenter,2430,59
 easy_q,3471,28
+easy_rails_authentication,6592,109
 easy_rails_money,6240,120
 easy_redis,1453,72
 easy_redis_lock,682,14
@@ -22536,6 +22991,7 @@ easy_weixin,1995,117
 easy_youtube,1754,61
 easy_zoom_on_rails,194,15
 easybench,1848,17
+easycompile,6128,284
 easyconf-rails,8358,107
 easycov,3743,82
 easycrumbs,5983,66
@@ -22573,6 +23029,7 @@ easywins,1253,46
 easyxdm-rails,8253,120
 easyzpl,2911,150
 eat,29589,241
+eatabit-rails,968,33
 eatenbyagrue-entity_storage,774,43
 eatmysoul,4491,59
 eav_hashes,1692,30
@@ -22730,6 +23187,7 @@ ecom2,114,13
 ecomba-memoizable,279,14
 ecomdev-chefspec,2449,131
 ecometry,2476,31
+ecomm,242,15
 ecommerce,7228,76
 econe,1757,17
 econfig,6076,85
@@ -22842,6 +23300,7 @@ edouard-ya2yaml,1301,14
 edploy,6378,90
 edr,5572,88
 eds-alpha,1703,30
+eds-mom,1417,14
 edsinclair-git-pair,2191,29
 edtf,14925,184
 edtf-rails,2444,71
@@ -22864,6 +23323,7 @@ ee_jammit,234,18
 ee_preferences,886,62
 ee_recipes,1771,17
 eedb,5201,49
+eee,1025,28
 eee-c-couch_design_docs,1024,64
 eee-c-couch_docs,520,29
 eeepub,27005,239
@@ -22968,6 +23428,7 @@ either-monad,241,33
 ej,1319,98
 ejabberd_rest,2652,111
 ejaydj,614,79
+ejectable,1737,29
 ejemplo,984,12
 ejhayes_standalone_migrations,307,13
 ejs,1026821,671
@@ -23050,6 +23511,7 @@ elasticsearch-node,7815,112
 elasticsearch-paramedic-rack,2839,59
 elasticsearch-persistence,11699,189
 elasticsearch-query-dsl,289,14
+elasticsearch-query_dsl,2413,103
 elasticsearch-rails,80115,331
 elasticsearch-rails2,671,48
 elasticsearch-ruby,6907,69
@@ -23201,6 +23663,7 @@ eload_select,1787,14
 elocal_capistrano,1496,91
 elock-client,3465,33
 elong,1205,31
+elong_hotel_api,757,46
 eloqua,9696,145
 eloqua_api,6239,124
 elq-jekyll,269,16
@@ -23297,6 +23760,7 @@ em-mixpanel,2995,30
 em-mongo,61693,360
 em-monitor,1661,16
 em-mqtt,3305,39
+em-mqtts,839,15
 em-msn,6563,111
 em-mysql,7175,46
 em-mysqlplus,8978,57
@@ -23587,6 +24051,7 @@ ember-seo,462,14
 ember-source,392439,817
 ember-source-machty,2403,30
 ember-template-compiler-source,10597,1
+ember-validations-rails,906,15
 ember_auth_rails,624,17
 ember_devise_simple_auth,3214,103
 ember_script,9392,93
@@ -23703,11 +24168,13 @@ emrpc,3456,37
 ems,21385,343
 ems_test_gem,1911,32
 emschwar-shoulda,262,17
+emt,618,14
 emtraceroute,1124,18
 emusic-downloader,1739,16
 emvoicer,2690,30
 en,511,33
 en_route,1374,13
+enable_autologin,576,21
 enable_beer,1194,30
 enabled,2710,31
 enableplaceholder-jquery-rails,3271,112
@@ -23717,6 +24184,7 @@ enc,393,64
 encapsulate_as_money,5981,18
 encase,1647,47
 encbs,21753,264
+encc,901,19
 enceladus,811,51
 enchant,9885,99
 enchilada,1094,16
@@ -23977,6 +24445,7 @@ entrance,640,49
 entrepot,400,19
 entrez,21104,262
 entropi-bootstrap-rails,1317,16
+entropia,471,16
 entropy,3808,52
 entypo-rails,34568,158
 enum,4134,32
@@ -24015,8 +24484,10 @@ enumerable_constants,1454,16
 enumerable_deep_search,2696,51
 enumerable_fu,2674,29
 enumerable_hashify,5496,73
+enumerable_juice,142,18
 enumerable_lz,7330,106
 enumerable_mapper,5179,49
+enumerable_replace,1134,16
 enumerabler,3442,18
 enumerabull,455,18
 enumeradical,2531,15
@@ -24080,6 +24551,7 @@ envious,4063,87
 enviro,6842,80
 environment,7505,79
 environment_configurable,1987,18
+environment_information,22905,948
 environment_initializers,911,15
 environmental,3448,35
 environmentalist,8345,81
@@ -24098,6 +24570,9 @@ envryo,494,33
 envs,1206,18
 envy,1381,16
 envyable,1627,33
+envygeeks-coveralls,4547,81
+envygeeks-gofer,388,37
+envygeeks-gofer-deploy,563,85
 envyous,100,0
 enwrap,831,14
 enzyme,8569,81
@@ -24129,6 +24604,7 @@ epguides,799,17
 ephemeral,6423,185
 ephemeral_response,33464,108
 epi,1220,117
+epi_cas,523,0
 epi_js,8642,220
 epiabstractions,3317,37
 epic,6850,67
@@ -24364,6 +24840,7 @@ error_log,7835,80
 error_merger,1020,29
 error_message_for_mobile,1742,17
 error_message_on,2252,52
+error_messages,24394,345
 error_messages_container,265,19
 error_messages_for,2099,19
 error_messages_for_helper,4266,70
@@ -24390,6 +24867,7 @@ errship,12772,138
 errship3,2654,47
 errship3-bootstrap,913,18
 erubis,34929623,25008
+erubis-auto,1481,31
 erubis-cached-text,303,15
 erubis_for_rails23,1126,32
 erubis_rails_helper,3880,18
@@ -24417,6 +24895,7 @@ esbit,2934,30
 esc-pos,1399,71
 escape,1868521,1042
 escape_escape_escape,1556,106
+escape_markdown,2047,49
 escape_to_rubyconf,1060,17
 escape_utils,1039790,1044
 escargot,3061,34
@@ -24503,6 +24982,7 @@ esvien,1756,18
 esx,16177,196
 esxi,1521,120
 esxmagicwand,3676,47
+esystem,539,17
 et,1528,106
 et_cms,1743,34
 et_history,256,16
@@ -24550,7 +25030,9 @@ etoro_utility_mcollective,4275,160
 etree,541,16
 etrstm35fin,218,17
 etsy,24983,167
+etti,1867,103
 ettu,15431,412
+etude,2507,49
 etvnet-seek,3236,35
 etvnet_seek,11594,117
 etzetera,1875,83
@@ -24566,6 +25048,7 @@ euler,11604,107
 euler-manager,2469,138
 eulers_day_off,858,16
 eureka,1787,16
+euro,329,34
 euromail,3364,83
 europe_vat_number_check,3351,37
 european-carry-all,1850,50
@@ -24772,6 +25255,7 @@ eviltrout-linguistics,263,19
 evio,747,20
 evm,4809,187
 evma_xmlpushparser,1765,17
+evmm,5645,99
 evo,597,14
 evoke_client,6762,66
 evoker,13336,184
@@ -24825,6 +25309,7 @@ example123qwe,1282,15
 example_gem,879,15
 example_group_timer,11092,66
 examplify,196,16
+exams,7788,383
 exc1_sum_squares,1999,32
 excalibur,1135,102
 excavator,2441,33
@@ -24835,6 +25320,7 @@ excel2csv,21178,258
 excel2json,605,20
 excel_builder,3634,49
 excel_checker,432,19
+excel_csv,591,32
 excel_functions,1276,49
 excel_parser,1394,32
 excel_rails,18137,118
@@ -24893,6 +25379,7 @@ exceptional,462166,591
 exceptional_fork,89,18
 exceptional_synchrony,475,19
 exceptionally,406,19
+exceptioncatchable,1426,31
 exceptioner,7686,84
 exceptiongem,376,15
 exceptionist,6498,69
@@ -24915,6 +25402,7 @@ exchanger,6639,65
 exchangerate,3374,31
 exchanges-rates-nbp,1119,63
 exchequer,899,16
+excipio,93,19
 excise,3790,63
 excite,2324,50
 excl_site_asset_scan,1349,16
@@ -25001,6 +25489,7 @@ exotel,3798,49
 exotel-api-client,573,19
 exoteric,5972,96
 exp,1522,52
+expand_cd_aliases,3399,131
 expand_path,1746,16
 expanded_date,11138,84
 expander,2686,31
@@ -25158,10 +25647,14 @@ extracare2of,258,16
 extract,867,18
 extract-curves,4628,50
 extract-sass-vars,4421,0
+extract_audio,2557,104
 extract_book_struct,784,15
 extract_curves,4670,46
 extract_files,3558,49
+extract_it,230,19
+extract_pdf_page,182,17
 extractcontent,3920,16
+extracter,9319,346
 extractify,1044,16
 extractor,2129,20
 extractors,1231,16
@@ -25346,9 +25839,11 @@ facade,36769,136
 facades,16673,327
 face,19543,181
 face-faye,1044,19
+face_ROI,5639,154
 faceb,3445,41
 facebokr,1492,39
 facebone,1033,39
+facebook,3199,18
 facebook-client,1619,42
 facebook-google-calendar-sync,3951,118
 facebook-graph,5010,60
@@ -25527,6 +26022,7 @@ fahrenheit,357,20
 fahrenheit-ubpb-primo,301,16
 fail-fast,11554,39
 fail2ban-geoip,264,21
+fail_bowl,1342,18
 fail_fast,15678,198
 fail_mail,916,36
 failbot,4861,136
@@ -25561,6 +26057,7 @@ fake_braintree,41724,333
 fake_british_toponym,389,38
 fake_chargify,1336,20
 fake_csv,788,77
+fake_delete,192,0
 fake_droid,1689,22
 fake_dropbox,2421,38
 fake_dynamo,53688,413
@@ -25574,6 +26071,7 @@ fake_gem,25177,372
 fake_gem_push,1303,20
 fake_home,806,19
 fake_mechanize,5090,60
+fake_model,2467,36
 fake_name_generator,4129,62
 fake_net_ldap,1397,17
 fake_password_field,443,61
@@ -25664,10 +26162,12 @@ famfamfam_icons-silk,1641,21
 famili,24446,391
 familia,16310,219
 familiarity,564,74
+family,1623,40
 family-reunion,15193,233
 familyjewels,1334,19
 familysearch,3965,117
 familysearch-gedcomx,1886,57
+famine,614,20
 famoseagle-carrot,1757,140
 famoseagle-sweat_shop,3015,235
 famous,410,19
@@ -25723,8 +26223,10 @@ fanforce-validations,12556,273
 fanforce-worker,22691,806
 fanforce-workers,35437,913
 fanfou,2408,39
+fangate,602,23
 fanny_pack,5771,98
 fannypack,348,21
+fansi,3904,58
 fanta,801,21
 fantaskspec,230,20
 fantassh,1274,73
@@ -25777,6 +26279,7 @@ faraday_middleware-reddit,2425,144
 faraday_middleware-retry_proxy,244,16
 faraday_middleware-rss,1019,40
 faraday_simulation,2537,40
+faraday_utf,469,20
 faraday_yaml,4161,57
 farbtastic-rails,3420,24
 fare,1627,124
@@ -25792,6 +26295,7 @@ farmer,3293,39
 farmer_otto,883,19
 farmingengineers,7797,98
 farmsense_wrapper,905,56
+farnell_robot,164,19
 farnsworth,784,19
 faroo,3117,58
 fars,1103,40
@@ -25842,6 +26346,7 @@ fast_require,5143,60
 fast_secure_compare,1152,100
 fast_seeder,3223,61
 fast_spork_runner,5969,82
+fast_spring,1343,16
 fast_sqlite,516,20
 fast_stack,67977,206
 fast_struct,1896,46
@@ -25876,6 +26381,7 @@ faster_rubygems,34290,411
 faster_s3,1586,62
 faster_shoulda,3047,39
 faster_xml_simple,12043,17
+faster_xml_simple_reader,1117,21
 fastercsv,5949136,2745
 fasterer-csv,37169,451
 fastest,2588,38
@@ -26022,6 +26528,7 @@ fcc_reboot,4797,73
 fcgi,198828,177
 fcgi-props-parser,1624,39
 fcgiwrap,3758,38
+fch,716,19
 fcid,1333,34
 fckeditor,5082,20
 fcoury-aasm,7840,43
@@ -26042,6 +26549,7 @@ fd-bertrpc,3395,39
 fd-slider-rails,4047,43
 fd_test,195,17
 fdb,4386,102
+fdb_proto,26256,1047
 fdc,5287,99
 fddb,837,40
 fdego,1126,59
@@ -26103,6 +26611,7 @@ fechell,3015,39
 fed,3511,98
 fed_spending,1365,20
 federal_register,8851,137
+federated_data,53732,38
 federated_rails,1792,98
 fedex,23946,310
 fedex-soap,94,21
@@ -26206,6 +26715,9 @@ felixclack-business_time,1056,21
 felixclack-cijoe,1350,18
 fellowshipone-api,5177,138
 fembem-forem,1860,64
+femida_checker,2658,193
+femida_flag_pusher,1276,99
+femida_submitter,251,19
 feminizer,7918,110
 femme_fatale,1252,20
 femto,328,23
@@ -26225,6 +26737,7 @@ fennec,18828,322
 fenopy,982,17
 fenris,13467,219
 fentonGem1,1279,19
+feralchimp,10970,239
 ferb,9662,115
 ferblape-query_memcached,269,22
 feriados,7153,102
@@ -26242,6 +26755,7 @@ fernet_multi_json,645,21
 fernyb_davclient,1795,19
 ferocia-rubywmq,4955,153
 ferret,169514,795
+ferret-dimelo,358,0
 ferroslider-rails,915,35
 ferry,2143,195
 ferryman,141,20
@@ -26491,6 +27005,8 @@ figs,7909,139
 figure_set,1663,44
 figurine,722,22
 fiksu-af,4574,156
+fiksu_db,846,118
+fiksu_tracking,716,89
 filament,14750,185
 filander,17624,231
 filbert,7228,232
@@ -26514,6 +27030,7 @@ file-utils,6427,47
 file-visitor,871,21
 file-watcher,16411,273
 file_backup,1648,20
+file_browser,13437,251
 file_bsearch,590,65
 file_cache,1972,21
 file_cache_refi,1330,21
@@ -26526,6 +27043,7 @@ file_convert,2251,63
 file_copy,4315,101
 file_discard,1415,126
 file_distribution,738,18
+file_duration,704,88
 file_editor,1611,44
 file_editor_cli,1546,40
 file_finder,252,23
@@ -26642,6 +27160,7 @@ filetree_xml,223,41
 filetter,5058,68
 fileturn,1309,39
 filetype,3930,60
+fileupdatetasks,10097,193
 fileupload-rails,1046,22
 fileuploader-rails,6810,132
 fileutil,3129,60
@@ -26687,6 +27206,7 @@ filterable-models,1323,22
 filterable_sortable,3010,124
 filterable_table,1640,22
 filtered_attributes,2566,40
+filtered_list,1423,20
 filtered_relation,3159,40
 filterer,7224,262
 filterfish-logging,267,19
@@ -26744,6 +27264,7 @@ find_dead_link,351,20
 find_duplicates,659,43
 find_gem,6802,88
 find_keywords,777,61
+find_line_in_file,618,37
 find_method,3157,44
 find_my_ip,1037,63
 find_or_create_on_scopes,21842,133
@@ -26825,6 +27346,7 @@ fire_and_forget,11917,177
 fire_dept,492,26
 fire_poll,5714,63
 fire_up,3299,41
+fireball,2225,62
 firebase,16520,215
 firebase_token_generator,11921,124
 firebased,100,21
@@ -26909,6 +27431,7 @@ fiscalizer,3738,204
 fish,2000,69
 fish.rb,789,56
 fishbowl,1928,38
+fishcli,1600,67
 fisher-rack,691,23
 fisher_classifier,1420,60
 fisheye-crucible,3395,40
@@ -27060,6 +27583,7 @@ fizzbuzz,3570,42
 fizzbuzz_aj,890,60
 fizzbuzzard,753,19
 fizzgig,4278,133
+fizzle,5099,80
 fizzy-api,412,62
 fjc-warbler,260,20
 fjords,5351,123
@@ -27076,6 +27600,7 @@ flac2lame,723,23
 flac2mp3,22933,317
 flacinfo-rb,14072,127
 flacky,6254,192
+flacsmith,901,85
 flag,405,22
 flag_icon_css_rails,263,22
 flag_promotions,1604,18
@@ -27149,6 +27674,7 @@ flashtastic,545,18
 flashtoggle,1341,22
 flashy,9643,34
 flat,1223,124
+flat-ui-2-rails,3043,153
 flat-ui-jqm-rails,719,20
 flat-ui-rails,10604,45
 flat-ui-sass,491,22
@@ -27164,6 +27690,7 @@ flatfish,3964,81
 flatfoot,1680,86
 flatiron-ice-breakers,690,23
 flatiron-rails,8333,520
+flatly_2_cms,1963,112
 flatpack_client,3225,64
 flatpack_core,3367,62
 flatpages,328,41
@@ -30007,7 +30534,6 @@ gen-hello,3688,77
 gen-password,590,29
 gen-tj,2433,53
 genRelease,209,49
-genZPK,5524,327
 gen_eval,14214,258
 gen_sheet,2052,78
 gen_sid,258,25
@@ -37652,7 +38178,6 @@ insults,4590,12
 insup,1414,22
 insurance,4843,11
 insurance_policy,920,5
-insxsync,5640,56
 insync,1187,2
 intalio-buildr4osgi,474,3
 intalio-rprov,691,4
@@ -80292,6 +80817,7 @@ superfeedr-superfeedr-ruby,1533,45
 superfish-rails,2906,7
 supergem,251,4
 superhash,2875,14
+supermail,254,-5
 supermarket,7783,39
 supermodel,41847,77
 supernova,39424,237
@@ -86199,7 +86725,6 @@ upload_kit-rails,2714,29
 uploadable,1644,17
 uploadable_file,1304,10
 uploadbox,14747,289
-uploadcare,1105,8
 uploadcare-rails,11126,177
 uploadcare-ruby,2074,32
 uploadcolumn,6318,46
