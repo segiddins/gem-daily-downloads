@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Get names from /names
+require 'net/http'
+
+names = Net::HTTP.get(URI 'https://rubygems.org/names').lines.map!(&:strip)
+known = Net::HTTP.get(URI 'https://sql-clickhouse.clickhouse.com?user=demo&password=&query=SELECT name from rubygems.rubygems').lines.map!(&:strip).uniq
+
+yanks = known - names
+File.write('yanks.txt', yanks.join("\n"))
